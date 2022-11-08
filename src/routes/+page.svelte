@@ -1,2 +1,3 @@
-<h1>Welkom bij vader grill</h1>
+<h1 class="text-3xl font-bold underline">Welkom bij vader grill</h1>
 <p>website in opbouµw</p>
+<p style="background-image: url('vadergrill.svg');"/> 
