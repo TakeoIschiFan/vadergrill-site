@@ -11,7 +11,17 @@ const Users: CollectionConfig = {
   },
   fields: [
     // Email added by default
-    // Add more fields as needed
+    {
+      name: "Betaald",
+      type: "checkbox"
+    },
+    {
+      name: "Tickets",
+      type: "relationship",
+      relationTo: "tickets",
+      hasMany: true,
+      unique: true
+    }
   ],
 };
 
