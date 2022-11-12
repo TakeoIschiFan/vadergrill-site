@@ -6,6 +6,8 @@
     --primary-color--: black;
     --primary-red--: red;
     --second-red--: rgb(220, 38, 38);
+    --third-red--: rgb(149,1,1);
+    --fourth-red--: rgb(61,0,0)
 }
 
 body {
