@@ -4,7 +4,8 @@
 
 :root {
     --primary-color--: black;
-    --primary-red--: red;
+    --secondary-color: rgb(17,24,39);
+    --primary-red--: rgb(250,0,0);
     --second-red--: rgb(220, 38, 38);
     --third-red--: rgb(149,1,1);
     --fourth-red--: rgb(61,0,0)
