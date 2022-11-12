@@ -1,6 +1,6 @@
-<h1 class="text-3xl font-bold font-mono">Praesidium</h1>
+<p class="text-3xl font-bold font-mono underline">Praesidium</p>
 
-<div id="wrapper1">
+<div id="wrapper1" class="relative top-12">
   <div class="flex">
     <div
       class="flex mb-10 relative z-10 before:absolute before:top-1 before:left-1 before:w-full before:h-full before:bg-red-600"
