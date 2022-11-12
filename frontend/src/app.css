@@ -4,13 +4,32 @@
 
 :root {
     --primary-color--: black;
-    --secondary-color--: red;
+    --primary-red--: red;
+    --second-red--: rgb(220, 38, 38);
 }
 
 body {
     background-color: var(--primary-color--);
-    color: var(--secondary-color--);
+    color: white;
     text-align: center;
 }
 
-
+::-webkit-scrollbar {
+    width: 0.7rem;
+    transform: width 600ms ease;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--primary-color--);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--second-red--);
+    border: 0.15rem solid transparent;
+    border-radius: 15px;
+    background-clip: padding-box;
+}
+::-webkit-scrollbar-track-piece{
+    background: var(--primary-color--);
+}
+::webkit-scrollbar-thumb:hover{
+    border: 0;
+}
