@@ -33,3 +33,9 @@ body {
 ::webkit-scrollbar-thumb:hover{
     border: 0;
 }
+
+#wrapper1{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
