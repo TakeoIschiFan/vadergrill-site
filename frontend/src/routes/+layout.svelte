@@ -13,7 +13,7 @@
   <div class="px-8 mx-atuo">
     <div class="flex justify-between">
       <div>
-        <a href="/" class="flex items-center">
+        <a href="/" class="flex items-center" on:click={() => (current = 0)}>
           <img src="/vadergrill.svg" class="h-16" alt="" />
           <span
             class="font-bold self-center text-xl whitespace-nowrap py-2 px-3 hover:text-red-600"
@@ -26,7 +26,7 @@
         <svg
           class:open
           viewBox="0 0 100 100"
-          fill="none"
+          fill="currentColor"
           stroke="currentColor"
           stroke-width="5"
           id="hamburger"
@@ -43,36 +43,37 @@
         </svg>
       </button>
       <div class="hidden md:flex items-center">
-        <div>
-          <a
-            href="/"
-            class="py-2 px-3 hover:text-red-300 rounded font-bold"
-            class:current={current === 0}
-            on:click={() => (current = 0)}>Home</a
-          >
-          <a
-            href="/evenementen"
-            class="py-2 px-3 hover:text-red-300 rounded font-bold"
-            class:current={current === 1}
-            on:click={() => (current = 1)}
-          >
-            Evenementen
-          </a>
-          <a
-            href="/over-ons"
-            class="py-2 px-3 hover:text-red-300 rounded font-bold"
-            class:current={current === 2}
-            on:click={() => (current = 2)}
-          >
-            Over Ons
+        <a
+          href="/"
+          class="py-2 px-3 font-bold relative nav-link w-nav-link"
+          style="max-width"
+          class:current={current === 0}
+          on:click={() => (current = 0)}>Home</a
+        >
+        <a
+          href="/evenementen"
+          class="py-2 px-3 font-bold relative nav-link w-nav-link"
+          style="max-width"
+          class:current={current === 1}
+          on:click={() => (current = 1)}
+        >
+          Evenementen
         </a>
-          <a
-            href="/login"
-            class="py-2 px-3 bg-red-600 rounded hover:bg-red-900 hover:text-red-300 font-bold"
-          >
-            Login</a
-          >
-        </div>
+        <a
+          href="/over-ons"
+          class="py-2 px-3 font-bold relative nav-link w-nav-link"
+          style="max-width"
+          class:current={current === 2}
+          on:click={() => (current = 2)}
+        >
+          Over Ons
+        </a>
+        <a
+          href="/login"
+          class="py-2 px-4 bg-red-600 rounded hover:bg-opacity-70 font-bold"
+        >
+          Login</a
+        >
       </div>
     </div>
   </div>
