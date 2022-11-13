@@ -8,7 +8,7 @@
     --primary-red--: rgb(250,0,0);
     --second-red--: rgb(220, 38, 38);
     --third-red--: rgb(149,1,1);
-    --fourth-red--: rgb(61,0,0);
+    --fourth-red--: rgb(130,1,1);
     --transition-duration: 400ms;
 }
 
@@ -23,17 +23,21 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 0.7rem;
+    width: 0.5rem;
     transform: width 600ms ease;
 }
 ::-webkit-scrollbar-track {
     background-color: var(--primary-color--);
 }
 ::-webkit-scrollbar-thumb {
-    background: var(--second-red--);
-    border: 0.15rem solid transparent;
+    background: var(--fourth-red--);
+    border: 0.10rem solid transparent;
     border-radius: 15px;
     background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--third-red--);
 }
 ::-webkit-scrollbar-track-piece{
     background: var(--primary-color--);
