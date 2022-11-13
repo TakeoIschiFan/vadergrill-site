@@ -46,13 +46,13 @@
         <div>
           <a
             href="/"
-            class="py-2 px-3 hover:bg-red-900 rounded font-bold"
+            class="py-2 px-3 hover:text-red-300 rounded font-bold"
             class:current={current === 0}
-            on:click={() => (current = 1)}>Home</a
+            on:click={() => (current = 0)}>Home</a
           >
           <a
             href="/evenementen"
-            class="py-2 px-3 hover:bg-red-900 rounded font-bold"
+            class="py-2 px-3 hover:text-red-300 rounded font-bold"
             class:current={current === 1}
             on:click={() => (current = 1)}
           >
@@ -60,15 +60,15 @@
           </a>
           <a
             href="/over-ons"
-            class="py-2 px-3 hover:bg-red-900 rounded font-bold"
+            class="py-2 px-3 hover:text-red-300 rounded font-bold"
             class:current={current === 2}
-            on:click={() => (current = 1)}
+            on:click={() => (current = 2)}
           >
             Over Ons
-          </a>
+        </a>
           <a
             href="/login"
-            class="py-2 px-3 bg-red-600 rounded hover:bg-red-900 font-bold"
+            class="py-2 px-3 bg-red-600 rounded hover:bg-red-900 hover:text-red-300 font-bold"
           >
             Login</a
           >
