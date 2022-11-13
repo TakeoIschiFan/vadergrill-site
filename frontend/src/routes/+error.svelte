@@ -1,19 +1,15 @@
-<script context="module">
-  export function load({ error }) {
-    return {
-      props: { message: error.message },
-    };
-  }
-</script>
-
 <script>
-  export let message;
+  import { error } from "@sveltejs/kit";
+  export let message = error;
+
+  import { src_url_equal, svg_element } from "svelte/internal";
+  import "../app.css";
 </script>
 
 <div id="error">
   <h2>Oopsies</h2>
   <p>{message}</p>
-  <p>head back home</p>
+  <p>Head back <a href="/" class="underline">Home</a></p>
 </div>
 
 <style>

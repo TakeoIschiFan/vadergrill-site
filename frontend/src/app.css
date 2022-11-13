@@ -31,8 +31,8 @@ body {
 }
 ::-webkit-scrollbar-thumb {
     background: var(--fourth-red--);
-    border: 0.10rem solid transparent;
-    border-radius: 15px;
+    border: 0.15rem solid transparent;
+    border-radius: 10px;
     background-clip: padding-box;
 }
 
@@ -41,9 +41,6 @@ body {
 }
 ::-webkit-scrollbar-track-piece{
     background: var(--primary-color--);
-}
-::webkit-scrollbar-thumb:hover{
-    border: 0;
 }
 
 #wrapper1{
