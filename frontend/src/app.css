@@ -8,11 +8,16 @@
     --primary-red--: rgb(250,0,0);
     --second-red--: rgb(220, 38, 38);
     --third-red--: rgb(149,1,1);
-    --fourth-red--: rgb(61,0,0)
+    --fourth-red--: rgb(61,0,0);
+    --transition-duration: 400ms;
+}
+
+svg {
+    transition: transform var(--transition-duration);
 }
 
 body {
-    background-color: var(--primary-color--);
+    background-color: var(--secondary-color);
     color: white;
     text-align: center;
 }
@@ -41,4 +46,56 @@ body {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+a {
+    transition: var(--transition-duration);
+}
+
+span {
+    transition: var(--transition-duration);
+}
+
+.top {
+    stroke-dasharray: 40 160;
+    transition: stroke-dashoffset var(--transition-duration);
+}
+
+.middle {
+    transform-origin: 50%;
+}
+
+.bottom {
+    stroke-dasharray: 40 85;
+    transition: stroke-dashoffset var(--transition-duration);
+}
+
+.open {
+    transform: rotate(45deg);
+}
+
+.open .top, .open .bottom {
+    stroke-dashoffset: -64px;
+}
+
+.open .middle {
+    transform: rotate(90deg)
+}
+
+#hamburger {
+    color: white;
+}
+
+.current {
+    position: relative;
+}
+
+a.current::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-red--);
 }
