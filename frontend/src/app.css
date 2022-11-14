@@ -120,3 +120,7 @@ a.current {
     padding-bottom: 5px;
     border-bottom: 3px solid var(--primary-red--);
 }
+
+#burger {
+    color: white;
+}
