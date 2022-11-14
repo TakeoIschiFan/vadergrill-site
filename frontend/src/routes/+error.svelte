@@ -1,5 +1,5 @@
 <script>
-  import { error } from "@sveltejs/kit";
+  import {error} from "@sveltejs/kit";
   export let message = error;
 
   import { src_url_equal, svg_element } from "svelte/internal";
