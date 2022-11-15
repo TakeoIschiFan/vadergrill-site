@@ -10,7 +10,7 @@
 
 </script>
 
-<nav class="bg-black sticky">
+<nav class="bg-black">
   <div class="px-8 mx-atuo">
     <div class="flex justify-between">
       <!--Logo here-->
@@ -82,8 +82,8 @@
     </div>
   </div>
   <!--Burger menu for mobile-->
-  <div class="bg-transparent w-full relative bottom-5" class:open={BurgerOpen} id="mobmenu">
-    <div>
+  <div class="bg-transparent w-full h-full relative bottom-5" class:open={BurgerOpen} id="mobmenu">
+    <div class="m-3 md:hidden">
     <a
       href="/"
       class="py-3 px-3 font-bold relative nav-link w-nav-link"
@@ -93,7 +93,7 @@
       on:click={onClick}>Home</a
     >
     </div>
-    <div>
+    <div class="m-3 md:hidden">
     <a
       href="/evenementen"
       class="py-2 px-3 font-bold relative nav-link w-nav-link"
@@ -105,7 +105,7 @@
       Evenementen
     </a>
     </div>
-    <div>
+    <div class="m-3 md:hidden">
     <a
       href="/over-ons"
       class="py-2 px-3 font-bold relative nav-link w-nav-link"
@@ -117,10 +117,10 @@
       Over Ons
     </a>
     </div>
-    <div>
+    <div class="m-3 md:hidden">
     <a
       href="/login"
-      class="py-1 px-3 m-5 relative top-2 bg-red-600 rounded hover:bg-opacity-70 font-bold"
+      class="py-2 px-4 m-5 relative top-2 bg-red-600 rounded hover:bg-opacity-70 font-bold"
       on:click={onClick}
     >
       Login</a
