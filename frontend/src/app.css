@@ -117,8 +117,13 @@ a.current {
 
 #mobmenu {
     display: none;
+    transition: all 400ms ease-in-out;
 }
 
 #mobmenu.open {
     display: block;
+}
+
+.mobitem {
+    transition: all 400ms ease-in-out;
 }
