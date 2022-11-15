@@ -20,7 +20,7 @@
         <h1 class="relative w-full flex mb-2 text-2xl font-semibold text-white">
           Praeses
         </h1>
-        <div class="relative text-lg text-white">Andreas Weiermann</div>
+        <div class="relative text-lg text-white">Andreas weiermann</div>
       </div>
     </div>
   </div>
