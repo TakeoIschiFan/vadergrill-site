@@ -2,9 +2,9 @@
   import { src_url_equal, svg_element } from "svelte/internal";
   import "../app.css";
 
-  export let open = false;
+  export let BurgerOpen = false;
   export let onClick = () => {
-    open = !open;
+    BurgerOpen = !BurgerOpen;
   };
   let current = 0;
 
@@ -26,7 +26,7 @@
       <!--Building the burger design for mobile-->
       <div class="flex-col relative top-4 md:hidden w-10 h-14">
         <button on:click={onClick} class="items-center">
-          <svg class="w-8 h-8 md:hidden relative" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 512 512" id="burger">
+          <svg class="w-8 h-8 md:hidden relative" class:open={BurgerOpen} version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 512 512" id="burger">
             <g>
               <g>
                 <g>
@@ -44,9 +44,8 @@
             </g>
           </svg>
         </button>
-        <!--Burger menu for mobile-->
-      <!--Dekstop navigation bar for topright-->
       </div>
+      <!--Dekstop navigation bar for topright-->
       <div class="hidden md:flex md:items-center">
         <a
           href="/"
@@ -80,6 +79,52 @@
           Login</a
         >
       </div>
+    </div>
+  </div>
+  <!--Burger menu for mobile-->
+  <div class="bg-transparent w-full relative bottom-5" class:open={BurgerOpen} id="mobmenu">
+    <div>
+    <a
+      href="/"
+      class="py-3 px-3 font-bold relative nav-link w-nav-link"
+      style="max-width"
+      class:current={current === 0}
+      on:click={() => (current = 0)}
+      on:click={onClick}>Home</a
+    >
+    </div>
+    <div>
+    <a
+      href="/evenementen"
+      class="py-2 px-3 font-bold relative nav-link w-nav-link"
+      style="max-width"
+      class:current={current === 1}
+      on:click={() => (current = 1)}
+      on:click={onClick}
+    >
+      Evenementen
+    </a>
+    </div>
+    <div>
+    <a
+      href="/over-ons"
+      class="py-2 px-3 font-bold relative nav-link w-nav-link"
+      style="max-width"
+      class:current={current === 2}
+      on:click={() => (current = 2)}
+      on:click={onClick}
+    >
+      Over Ons
+    </a>
+    </div>
+    <div>
+    <a
+      href="/login"
+      class="py-1 px-3 m-5 relative top-2 bg-red-600 rounded hover:bg-opacity-70 font-bold"
+      on:click={onClick}
+    >
+      Login</a
+    >
     </div>
   </div>
   <!--Small red bar underneath navigation bar-->

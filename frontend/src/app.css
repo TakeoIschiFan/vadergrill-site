@@ -58,40 +58,9 @@ span {
     transition: var(--transition-duration);
 }
 
-.top {
-    stroke-dasharray: 40 160;
-    transition: stroke-dashoffset var(--transition-duration);
-}
-
-.middle {
-    transform-origin: 50%;
-}
-
-.bottom {
-    stroke-dasharray: 40 85;
-    transition: stroke-dashoffset var(--transition-duration);
-}
-
-.open {
-    transform: rotate(45deg);
-}
-
-.open .top, .open .bottom {
-    stroke-dashoffset: -64px;
-}
-
-.open .middle {
-    transform: rotate(90deg)
-}
-
-#hamburger {
-    color: white;
-}
-
 .current {
     position: relative;
 }
-
 
 a.current {
     color: var(--second-red--);
@@ -136,4 +105,20 @@ a.current {
 
 #burger:hover #botbun {
     transform: translateY(15%);
+}
+
+#burger.open #topbun {
+    transform: translateY(-15%);
+}
+
+#burger.open #botbun {
+    transform: translateY(15%)
+}
+
+#mobmenu {
+    display: none;
+}
+
+#mobmenu.open {
+    display: block;
 }
