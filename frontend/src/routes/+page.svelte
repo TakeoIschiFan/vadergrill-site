@@ -1,5 +1,5 @@
 <header>
-  <img src="vadergrill.svg" id="headerlogo" height="180px" width="180px" />
+  <img src="vadergrill.svg" id="headerlogo" height="180px" width="180px"/>
   <h1>Welkom bij vader grill</h1>
 </header>
 <p class="m-4 min-h-full">website in opbouw</p>
