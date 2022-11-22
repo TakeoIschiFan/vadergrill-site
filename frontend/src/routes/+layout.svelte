@@ -148,7 +148,4 @@
   <div class="bg-red-600 mx-auto h-2" />
 </nav>
 
-<footer class="w-full p-4 bg-black fixed left-0 bottom-0 text-center">
-  <p>Dit is de footer voor onze dingen</p>
-</footer>
 <slot />
