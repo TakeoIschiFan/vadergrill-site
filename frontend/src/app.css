@@ -45,7 +45,18 @@ header {
 }
 
 .lint {
+    position: relative;
     clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
+    padding-top: 20em;
+    padding-bottom: 3.5em;
+}
+
+.lint-zwart {
+    bottom: 22em;
+}
+
+.lint-rood {
+    bottom: 44em;
 }
 
 ::-webkit-scrollbar {
