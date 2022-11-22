@@ -1,8 +1,8 @@
 <header>
-  <img src="vadergrill.svg" id="headerlogo" height="180px" width="180px"/>
-  <h1 class="text-3xl text-white font-bold">VADER GRILL</h1>
+  <img src="vadergrill.svg" id="headerlogo" height="170px" width="170px"/>
+  <h1 class="text-3xl text-white font-bold" id="mainname">VADER GRILL</h1>
 </header>
-<p class="m-4 min-h-full">website in opbouw</p>
+<p class="m-4 min-h-full text-3xl font-bold">website in opbouw</p>
 <p class="m-4">
   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem adipisci,
   dolores dolore laboriosam tenetur velit quaerat laborum libero at nihil
