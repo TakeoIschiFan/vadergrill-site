@@ -127,6 +127,8 @@ a.current {
     border-bottom: 3px solid var(--primary-red--);
 }
 
+/*Mobile menu thingies*/
+
 #burger {
     color: white;
 }
@@ -154,13 +156,8 @@ a.current {
 
 #mobmenu {
     display: none;
-    transition: all 400ms ease-in-out;
 }
 
 #mobmenu.open {
     display: block;
-}
-
-.mobitem {
-    transition: all 400ms ease-in-out;
 }

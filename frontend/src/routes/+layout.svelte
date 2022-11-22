@@ -24,8 +24,8 @@
         </a>
       </div>
       <!--Building the burger design for mobile-->
-      <div class="flex-col relative top-4 md:hidden w-10 h-14">
-        <button on:click={onClick} class="items-center">
+      <div class="flex-col relative top-4 md:hidden w-10 h-14 justify-center">
+        <button on:click={onClick}>
           <svg class="w-8 h-8 md:hidden relative" class:open={BurgerOpen} version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 512 512" id="burger">
             <g>
               <g>
