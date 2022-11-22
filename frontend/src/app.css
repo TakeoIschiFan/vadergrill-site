@@ -141,7 +141,6 @@ a.current {
     transform: translateY(-15%);
 }
 
-
 #burger:hover #botbun {
     transform: translateY(15%);
 }

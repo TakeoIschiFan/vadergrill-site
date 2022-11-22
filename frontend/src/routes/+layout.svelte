@@ -90,7 +90,7 @@
   </div>
   <!--Burger menu for mobile-->
   <div class="bg-transparent w-full h-full relative bottom-5" class:open={BurgerOpen} id="mobmenu">
-    <div class="m-3 md:hidden">
+    <div class="m-3 md:hidden text-center">
     <a
       href="/"
       class="py-3 px-3 font-bold relative nav-link w-nav-link"
@@ -100,7 +100,7 @@
       on:click={onClick}>Home</a
     >
     </div>
-    <div class="m-3 md:hidden">
+    <div class="m-3 md:hidden text-center">
     <a
       href="/evenementen"
       class="py-2 px-3 font-bold relative nav-link w-nav-link"
@@ -112,7 +112,7 @@
       Evenementen
     </a>
     </div>
-    <div class="m-3 md:hidden">
+    <div class="m-3 md:hidden text-center">
     <a
       href="/over-ons"
       class="py-2 px-3 font-bold relative nav-link w-nav-link"
@@ -124,7 +124,7 @@
       Over Ons
     </a>
     </div>
-    <div class="m-3 md:hidden">
+    <div class="m-3 md:hidden text-center">
       <a
         href="/testoverons"
         class="py-3 px-3 font-bold relative nav-link w-nav-link"
@@ -134,7 +134,7 @@
         on:click={onClick}>Test Over Ons</a
       >
       </div>
-    <div class="m-3 md:hidden">
+    <div class="m-3 md:hidden text-center">
     <a
       href="/login"
       class="py-2 px-4 m-5 relative top-2 bg-red-600 rounded hover:bg-opacity-70 font-bold"
