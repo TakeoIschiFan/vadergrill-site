@@ -33,7 +33,6 @@ header {
     background-image: url(background.jpg);
     background-attachment: fixed;
     background-position: center;
-    margin-bottom: 1em;
     padding-bottom: 3.5em;
 }
 
@@ -43,6 +42,10 @@ header {
 
 #mainname {
     text-shadow: 1px 1px #000000;
+}
+
+.lint {
+    clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
 }
 
 ::-webkit-scrollbar {
