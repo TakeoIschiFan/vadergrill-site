@@ -24,8 +24,8 @@
         </a>
       </div>
       <!--Building the burger design for mobile-->
-      <div class="flex-col relative top-4 md:hidden w-10 h-14">
-        <button on:click={onClick} class="items-center">
+      <div class="flex-col relative top-4 md:hidden w-10 h-14 justify-center">
+        <button on:click={onClick}>
           <svg class="w-8 h-8 md:hidden relative" class:open={BurgerOpen} version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 512 512" id="burger">
             <g>
               <g>
@@ -90,7 +90,7 @@
   </div>
   <!--Burger menu for mobile-->
   <div class="bg-transparent w-full h-full relative bottom-5" class:open={BurgerOpen} id="mobmenu">
-    <div class="m-3 md:hidden">
+    <div class="m-3 md:hidden text-center">
     <a
       href="/"
       class="py-3 px-3 font-bold relative nav-link w-nav-link"
@@ -100,7 +100,7 @@
       on:click={onClick}>Home</a
     >
     </div>
-    <div class="m-3 md:hidden">
+    <div class="m-3 md:hidden text-center">
     <a
       href="/evenementen"
       class="py-2 px-3 font-bold relative nav-link w-nav-link"
@@ -112,7 +112,7 @@
       Evenementen
     </a>
     </div>
-    <div class="m-3 md:hidden">
+    <div class="m-3 md:hidden text-center">
     <a
       href="/over-ons"
       class="py-2 px-3 font-bold relative nav-link w-nav-link"
@@ -124,7 +124,7 @@
       Over Ons
     </a>
     </div>
-    <div class="m-3 md:hidden">
+    <div class="m-3 md:hidden text-center">
       <a
         href="/testoverons"
         class="py-3 px-3 font-bold relative nav-link w-nav-link"
@@ -134,7 +134,7 @@
         on:click={onClick}>Test Over Ons</a
       >
       </div>
-    <div class="m-3 md:hidden">
+    <div class="m-3 md:hidden text-center">
     <a
       href="/login"
       class="py-2 px-4 m-5 relative top-2 bg-red-600 rounded hover:bg-opacity-70 font-bold"
