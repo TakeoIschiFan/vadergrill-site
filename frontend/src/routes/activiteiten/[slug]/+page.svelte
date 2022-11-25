@@ -4,7 +4,5 @@
 </script>
 
  <h1>
-    dit is eventement slug {data.Titel} 
+    dit is eventement slug {data} 
 </h1>
-
-<p>{data.Beschrijving}</p>
