@@ -55,13 +55,13 @@
           on:click={() => (current = 0)}>Home</a
         >
         <a
-          href="/evenementen"
+          href="/activiteiten"
           class="py-2 px-3 font-bold relative nav-link w-nav-link"
           style="max-width"
           class:current={current === 1}
           on:click={() => (current = 1)}
         >
-          Evenementen
+          Activiteiten
         </a>
         <a
           href="/over-ons"
