@@ -52,7 +52,7 @@ body {
 
 .lint-zwart {
     position: absolute;
-    bottom: 41.25em;
+    bottom: 890px;
     padding-top: 20em;
     padding-bottom: 3.5em;
     clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
@@ -60,7 +60,7 @@ body {
 
 .lint-rood {
     position: absolute;
-    bottom: 40em;
+    bottom: 865px;
     padding-top: 20em;
     padding-bottom: 3.5em;
     clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
