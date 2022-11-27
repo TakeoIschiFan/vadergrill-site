@@ -1,0 +1,1 @@
+import{S as n,i as o,s as r,q as c,r as l,b as u,B as a,h as f}from"../../../chunks/index-fe22117e.js";function m(s){let t;return{c(){t=c("Wie zijn wij?")},l(e){t=l(e,"Wie zijn wij?")},m(e,i){u(e,t,i)},p:a,i:a,o:a,d(e){e&&f(t)}}}class d extends n{constructor(t){super(),o(this,t,null,m,r,{})}}export{d as default};
