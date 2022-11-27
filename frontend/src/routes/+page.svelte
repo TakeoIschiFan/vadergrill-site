@@ -1,4 +1,4 @@
-<header>
+<header class="mb-20">
   <div id="headerbox">
     <img src="vadergrill.svg" id="headerlogo" height="170px" width="170px" alt=""/>
     <h1 class="text-3xl text-white font-bold" id="mainname">VADER GRILL</h1>
