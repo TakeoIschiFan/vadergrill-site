@@ -9,10 +9,10 @@
     />
     <h1 class="text-3xl font-bold" id="mainname">VADER GRILL</h1>
   </div>
-  <div class="lint">
+  <div id="lint">
     <div class="bg-black -z-10 lint-zwart w-full" />
     <div class="bg-red-600 -z-20 lint-rood w-full" />
-  </div>
+    </div>
 </header>
 <h1 class="mx-4 my-8 text-3xl font-bold underline text-center">
   Welkom bij Vader Grill!
