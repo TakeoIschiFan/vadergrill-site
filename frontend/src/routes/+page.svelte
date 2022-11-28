@@ -21,9 +21,13 @@
   De Studentenvereniging voor studenten die houden van BBQ!
 </p>
 
-<section class="bg-black">
-  <h1 class="text-3xl font-bold ">Over Ons</h1>
-  <div class="custom-shape-divider-top-1669586482">
+<section class="bg-black m-8 rounded-3xl text-center">
+  <h1 class="text-3xl font-bold underline m-4">Over Ons</h1>
+  <p>
+    Wij zijn een Studentenvereniging die zich inzet voor mensen die houden van bbq. <br> Opgericht in het jaar 2022 en nog steeds levend!
+  </p>
+<!--
+    <div class="custom-shape-divider-top-1669586482">
     <svg
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
@@ -36,4 +40,5 @@
       />
     </svg>
   </div>
+-->
 </section>
