@@ -55,7 +55,7 @@
           on:click={() => (current = 0)}>Home</a
         >
         <a
-          href="/evenementen"
+          href="/activiteiten"
           class="py-2 px-3 font-bold relative nav-link w-nav-link"
           style="max-width"
           class:current={current === 1}
@@ -102,7 +102,7 @@
     </div>
     <div class="m-3 md:hidden text-center">
     <a
-      href="/evenementen"
+      href="/activiteiten"
       class="py-2 px-3 font-bold relative nav-link w-nav-link"
       style="max-width"
       class:current={current === 1}
