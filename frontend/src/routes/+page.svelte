@@ -1,4 +1,5 @@
 <header class="mb-20">
+  <!--Main headerbox with content and background image-->
   <div id="headerbox">
     <img
       src="vadergrill.svg"
@@ -9,11 +10,13 @@
     />
     <h1 class="text-3xl font-bold" id="mainname">VADER GRILL</h1>
   </div>
+  <!--Creating the 'linten' underneath the picture-->
   <div id="lint">
     <div class="bg-black -z-10 lint-zwart w-full" />
     <div class="bg-red-600 -z-20 lint-rood w-full" />
   </div>
 </header>
+<!--Each section is a different block on the page-->
 <section class="bg-black m-8 rounded-3xl text-center">
 <h1 class="mx-4 my-8 text-3xl font-bold underline text-center">
   Welkom bij Vader Grill!
@@ -29,7 +32,7 @@
     Wij zijn een Studentenvereniging die zich inzet voor mensen die houden van
     bbq. <br /> Opgericht in het jaar 2022 en nog steeds levend!
   </p>
-  <!--
+  <!-- curvy thingy
     <div class="custom-shape-divider-top-1669586482">
     <svg
       data-name="Layer 1"

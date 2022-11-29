@@ -1,6 +1,6 @@
 <p class="text-3xl font-bold font-mono underline">Praesidium</p>
 <!-- Grid use for better layout-->
-<div id="wrapper1" class="relative top-12">
+<div id="wrapper1" class="relat©ive top-12">
   <!--Item 1-->
   <div class="flex mx-3 my-3">
     <div
