@@ -27,7 +27,7 @@ body {
 section {
     position: relative;
     align-items: center;
-    min-height: 400px;
+    min-height: 300px;
     padding: 50px 5vw;
 }
 
@@ -74,25 +74,6 @@ section {
     clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
 }
 
-.custom-shape-divider-top-1669586482 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-top-1669586482 svg {
-    position: relative;
-    display: block;
-    width: calc(129% + 1.3px);
-    height: 85px;
-}
-
-.custom-shape-divider-top-1669586482 .shape-fill {
-    fill: var(--second-red--);
-}
 
 ::-webkit-scrollbar {
     transform: width 600ms ease;
