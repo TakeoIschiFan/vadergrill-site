@@ -9,11 +9,13 @@
       alt=""
     />
     <!--Header text underneath the logo-->
+    <div class="text-center mb-20">
     <h1 class="text-3xl font-bold headertext">VADER GRILL</h1>
     <p class="headertext font-semibold">
       De Studentenvereniging voor mensen die houden van BBQ!
     </p>
     <p class="headertext font-semibold">Est. 2022</p>
+    </div>
   </div>
   <!--Creating the 'linten' underneath the picture-->
   <div id="lint">
