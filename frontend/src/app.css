@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* General css */
+
 :root {
     --primary-color--: rgb(13,17,23);
     --secondary-color: rgb(22,27,34);
@@ -25,11 +27,15 @@ body {
 }
 
 section {
-    position: relative;
     align-items: center;
-    min-height: 300px;
-    padding: 50px 5vw;
+    min-height: 250px;
+    min-width: 468px;
+    padding: 25px;
+    width: fit-content;
+    height: fit-content;
 }
+
+/* Header on home page css */
 
 #headerbox {
     display: flex;
@@ -47,7 +53,7 @@ section {
     margin: 2em 0 0;
 }
 
-#mainname {
+.headertext {
     text-shadow: 1px 1px #000000;
 }
 
@@ -74,6 +80,15 @@ section {
     clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
 }
 
+/* Home page extra */
+
+.homepagegrid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+/*Scrollbar costumization, doesn't work on every browser */
 
 ::-webkit-scrollbar {
     transform: width 600ms ease;
@@ -101,6 +116,8 @@ section {
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
+
+/* Navbar css */
 
 a {
     transition: var(--transition-duration);
