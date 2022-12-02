@@ -73,13 +73,6 @@
           Over Ons
         </a>
         <a
-          href="/testoverons"
-          class="py-2 px-3 font-bold relative nav-link w-nav-link"
-          style="max-width"
-          class:current={current === 3}
-          on:click={() => (current = 3)}>Test OVer Ons</a
-        >
-        <a
           href="/login"
           class="py-2 px-4 bg-red-600 rounded hover:bg-opacity-70 font-bold"
         >
@@ -124,16 +117,6 @@
       Over Ons
     </a>
     </div>
-    <div class="m-3 md:hidden text-center">
-      <a
-        href="/testoverons"
-        class="py-3 px-3 font-bold relative nav-link w-nav-link"
-        style="max-width"
-        class:current={current === 3}
-        on:click={() => (current = 3)}
-        on:click={onClick}>Test Over Ons</a
-      >
-      </div>
     <div class="m-3 md:hidden text-center">
     <a
       href="/login"
