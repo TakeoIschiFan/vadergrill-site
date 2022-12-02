@@ -4,7 +4,7 @@
     export let naam: string;
     export let image: string?
 </script>
-<div class="relative z-10 bg-black rounded-lg right-0.5">
+<div class="relative z-10 bg-black rounded-lg right-0.5 praesidiumkaart">
 <div class="grid grid-cols-2 gap-1">
     <img
     src="/testfoto.jpg"
@@ -25,3 +25,10 @@
    </div>
 </div>
 </div>
+
+<style>
+    .praesidiumkaart:hover {
+        transform: scale(1.05);
+        transition: 400ms;
+    }
+</style>
