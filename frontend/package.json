@@ -33,6 +33,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"pocketbase": "^0.8.1"
+		"pocketbase": "^0.8.1",
+		"zod": "^3.19.1",
+		"zod-form-data": "^1.2.4"
 	}
 }
