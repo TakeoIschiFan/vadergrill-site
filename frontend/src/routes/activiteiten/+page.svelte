@@ -22,21 +22,21 @@
 <div class="flex-col ">
     {#each data.activiteiten.items as act}
         <div class="flex m-4 px-4 py-2 align-center gap-8 justify-start rounded-xl activiteit">
-            <div>
+            <div class="max-w-xs">
                 <a
                     href={"/activiteiten/" + act.slug}
                     class="hover:underline">{act.titel}</a
                 >
             </div>
-            <div class="flex gap-2">
-                <img src="/date.svg" alt="" class="h-7 w-7">
+            <div class="flex gap-2 max-w-xs">
+                <img src="/date.svg" alt="">
                 <p>
                     {act.start.slice(8, 10)}
                     {maanden[act.start.slice(5, 7)]}
                     {act.start.slice(0, 4)}
                 </p>
             </div>
-            <div class="flex gap-2">
+            <div class="flex gap-2 max-w-xs">
                 <img src="/clock.svg" alt="" class="w-6 h-6">
                 <p>{act.start.slice(11, 16)}</p>
             </div>

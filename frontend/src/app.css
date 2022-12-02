@@ -193,3 +193,10 @@ a.current {
 #mobmenu.open {
     display: block;
 }
+
+
+/* All SVGs */
+
+#clocksvg, #datesvg {
+    color: white;
+}
