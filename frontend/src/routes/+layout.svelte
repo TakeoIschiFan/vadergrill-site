@@ -102,7 +102,7 @@
       on:click={() => (current = 1)}
       on:click={onClick}
     >
-      Evenementen
+      Activiteiten
     </a>
     </div>
     <div class="m-3 md:hidden text-center">
