@@ -25,7 +25,7 @@
             <div class="max-w-xs">
                 <a
                     href={"/activiteiten/" + act.slug}
-                    class="hover:underline">{act.titel}</a
+                    class="hover:text-red-600">{act.titel}</a
                 >
             </div>
             <div class="flex gap-2 max-w-xs">
