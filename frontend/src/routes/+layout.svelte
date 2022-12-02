@@ -61,7 +61,7 @@
           class:current={current === 1}
           on:click={() => (current = 1)}
         >
-          Evenementen
+          Activiteiten
         </a>
         <a
           href="/over-ons"

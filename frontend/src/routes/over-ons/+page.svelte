@@ -1,71 +1,20 @@
-<p class="text-3xl font-bold font-mono underline">Praesidium</p>
+<script>
+  import PraesidiumCard from "$lib/components/praesidiumCard.svelte";
+
+</script>
+<h1 class="text-3xl text-white font-bold mt-10 text-center" id="mainname">Praesidium</h1>
 <!-- Grid use for better layout-->
 <div id="wrapper1" class="relative top-12">
-  <!--Item 1-->
-  <div class="flex mx-3 my-3">
-    <div
-      class="flex mb-10 relative z-10 before:absolute before:rounded-lg before:top-1 before:left-1 before:w-full before:h-full before:bg-red-600"
-    >
-      <img
-        src="/testfoto.jpg"
-        alt=""
-        class="relative z-10 inset-0 w-full h-full object-cover rounded-lg"
-        loading="lazy"
-      />
-    </div>
-    <div class="flex pl-6">
-      <div
-        class="relative flex flex-wrap items-baseline pb-6 before:rounded-lg before:bg-black before:absolute before:-top-6 before:bottom-0 before:-left-60 before:-right-6"
-      >
-        <h1 class="relative w-full flex mb-2 text-2xl font-semibold text-white">
-          Praeses
-        </h1>
-        <div class="relative text-lg text-white">Andreas weiermann</div>
-      </div>
-    </div>
-  </div>
-  <div class="flex mx-3 my-3">
-    <div
-      class="flex mb-10 relative z-10 before:absolute before:rounded-lg before:top-1 before:left-1 before:w-full before:h-full before:bg-red-600"
-    >
-      <img
-        src="/testfoto.jpg"
-        alt=""
-        class="relative z-10 inset-0 w-full h-full object-cover rounded-lg"
-        loading="lazy"
-      />
-    </div>
-    <div class="flex pl-6">
-      <div
-        class="relative flex flex-wrap items-baseline pb-6 before:rounded-lg before:bg-black before:absolute before:-top-6 before:bottom-0 before:-left-60 before:-right-6"
-      >
-        <h1 class="relative w-full flex mb-2 text-2xl font-semibold text-white">
-          Praeses
-        </h1>
-        <div class="relative text-lg text-white">Andreas Weiermann</div>
-      </div>
-    </div>
-  </div>
-  <div class="flex mx-3 my-3">
-    <div
-      class="flex mb-10 relative z-10 before:absolute before:rounded-lg before:top-1 before:left-1 before:w-full before:h-full before:bg-red-600"
-    >
-      <img
-        src="/testfoto.jpg"
-        alt=""
-        class="relative z-10 inset-0 w-full h-full object-cover rounded-lg"
-        loading="lazy"
-      />
-    </div>
-    <div class="flex pl-6">
-      <div
-        class="relative flex flex-wrap items-baseline pb-6 before:rounded-lg before:bg-black before:absolute before:-top-6 before:bottom-0 before:-left-60 before:-right-6"
-      >
-        <h1 class="relative w-full flex mb-2 text-2xl font-semibold text-white">
-          Praeses
-        </h1>
-        <div class="relative text-lg text-white">Andreas Weiermann</div>
-      </div>
-    </div>
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 ml-4 mr-4">
+    <PraesidiumCard functie="Grill Master" functie2="Praeses" naam="Tom Burgelman"  />
+    <PraesidiumCard functie="Grill Leerling" functie2="Vicepraeses" naam="Anton Leagre"  />
+    <PraesidiumCard functie="Leverancier" functie2="Quaestor" naam="Phileas Massun"  />
+    <PraesidiumCard functie="Slager" functie2="Schachtentemmer" naam="Fangio Decaluwe"  />
+    <PraesidiumCard functie="Amadeus" functie2="Cantor" naam="Ferre Despierre"  />
+    <PraesidiumCard functie="Lookboter" functie2="Cultuur" naam="Sibylle Bosschaert"  />
+    <PraesidiumCard functie="Mayonaise" functie2="Socials" naam="Fedra Moeykens"  />
+    <PraesidiumCard functie="Balletjes" functie2="Feest" naam="Kobe Degeetere"  />
+    <PraesidiumCard functie="Entrecote" functie2="Sport" naam="Yari De Backer"  />
+    <PraesidiumCard functie="Entrecote" functie2="Sport" naam="Mattheo Vereertbrugghen"  />
   </div>
 </div>
