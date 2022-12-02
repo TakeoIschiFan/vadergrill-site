@@ -24,11 +24,11 @@
         </a>
       </div>
       <!--Building the burger design for mobile-->
-      <div class="flex-col relative top-4 md:hidden w-10 h-14 justify-center">
+      <div class="relative top-2 md:hidden">
         <button on:click={onClick}>
-          <svg class="w-8 h-8 md:hidden relative" class:open={BurgerOpen} version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 512 512" id="burger">
+          <svg class="w-12 h-12 md:hidden" class:open={BurgerOpen} version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 -110 512 750" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 512 512" id="burger">
             <g>
-              <g>
+              <g> 
                 <g>
                   <g>
                     <path id="topbun" d="m480.7,228.6h-449.2c-11.3,0-20.4-9.1-20.4-20.4v-29.7c-1.77636e-15-92.4 75.1-167.5 167.4-167.5h155.1c92.3,0 167.5,75.1 167.5,167.5v29.7c0,11.2-9.2,20.4-20.4,20.4zm-428.8-40.9h408.3v-9.3c0-69.8-56.8-126.6-126.6-126.6h-155.1c-69.8,0-126.6,56.8-126.6,126.6v9.3z" fill="currentcolor"/>
@@ -73,13 +73,6 @@
           Over Ons
         </a>
         <a
-          href="/testoverons"
-          class="py-2 px-3 font-bold relative nav-link w-nav-link"
-          style="max-width"
-          class:current={current === 3}
-          on:click={() => (current = 3)}>Test OVer Ons</a
-        >
-        <a
           href="/login"
           class="py-2 px-4 bg-red-600 rounded hover:bg-opacity-70 font-bold"
         >
@@ -102,7 +95,7 @@
     </div>
     <div class="m-3 md:hidden text-center">
     <a
-      href="/evenementen"
+      href="/activiteiten"
       class="py-2 px-3 font-bold relative nav-link w-nav-link"
       style="max-width"
       class:current={current === 1}
@@ -124,16 +117,6 @@
       Over Ons
     </a>
     </div>
-    <div class="m-3 md:hidden text-center">
-      <a
-        href="/testoverons"
-        class="py-3 px-3 font-bold relative nav-link w-nav-link"
-        style="max-width"
-        class:current={current === 3}
-        on:click={() => (current = 3)}
-        on:click={onClick}>Test Over Ons</a
-      >
-      </div>
     <div class="m-3 md:hidden text-center">
     <a
       href="/login"
