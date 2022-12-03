@@ -1,2 +1,5 @@
 pocketbase
 pocketbase.exe
+pbdata/logs.db
+pbdata/logs.db-shm
+pbdata/logs.db-wal
