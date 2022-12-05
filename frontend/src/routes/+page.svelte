@@ -10,11 +10,11 @@
     />
     <!--Header text underneath the logo-->
     <div class="text-center mb-20">
-    <h1 class="text-3xl font-bold headertext">VADER GRILL</h1>
-    <p class="headertext font-semibold">
-      De Studentenvereniging voor mensen die houden van BBQ!
-    </p>
-    <p class="headertext font-semibold">Est. 2022</p>
+      <h1 class="text-3xl font-bold headertext">VADER GRILL</h1>
+      <p class="headertext font-semibold">
+        De Studentenvereniging voor mensen die houden van BBQ!
+      </p>
+      <p class="headertext font-semibold">Est. 2022</p>
     </div>
   </div>
   <!--Creating the 'linten' underneath the picture-->
@@ -25,17 +25,26 @@
 </header>
 
 <!-- Using a grid layout for the home page -->
-
-<div class="gap-1 homepagegrid relative">
-  <section class="bg-red-900 m-4 rounded-3xl text-center">
-    <h1 class="text-3xl font-bold underline m-4">Over Ons</h1>
-    <p>
-      Wij zijn een Studentenvereniging die zich inzet voor mensen die houden van
-      bbq. <br /> Opgericht in het jaar 2022 en nog steeds levend!
-    </p>
-  </section>
-  <section class="bg-black m-4 rounded-3xl text-center">
-    <h1 class="text-3xl font-bold underline m-4">Evenementen</h1>
-    <p>Hier zouden dan een paar Evenementen komen.</p>
-  </section>
+<div class="maxwidth">
+  <div class="gap-1 grid grid-cols-1 lg:grid-cols-2 relative">
+    <section class="bg-red-900 m-4 rounded-3xl text-center">
+      <h1 class="text-3xl font-bold underline m-4">Over Ons</h1>
+      <p>
+        Wij zijn een Studentenvereniging die zich inzet voor mensen die houden
+        van bbq. <br /> Opgericht in het jaar 2022 en nog steeds levend!
+      </p>
+    </section>
+    <section class="bg-black m-4 rounded-3xl text-center">
+      <h1 class="text-3xl font-bold underline m-4">Evenementen</h1>
+      <p>Hier zouden dan een paar Evenementen komen.</p>
+    </section>
+  </div>
 </div>
+
+<style>
+  section {
+    align-items: center;
+    width: 90%;
+    padding: 25px;
+  }
+</style>
