@@ -56,7 +56,7 @@
           >
           <p>
             {act.start.slice(8, 10)}
-            {maanden[act.start.slice(5, 7)]}
+            {maanden[act.start.slice(5, 7) - 1]}
             {act.start.slice(0, 4)}
           </p>
         </div>

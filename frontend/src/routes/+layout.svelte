@@ -18,7 +18,7 @@
   <div class="mx-auto" id="headerdiv">
     <div class="flex justify-between">
       <!--Logo here-->
-      <div>
+      <div class="relative top-1">
         <a href="/" class="flex items-center" on:click={() => (current = 0)}>
           <img src="/vadergrill.svg" class="h-16" alt="" />
           <span

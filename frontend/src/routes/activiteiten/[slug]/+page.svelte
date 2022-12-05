@@ -46,9 +46,11 @@
   >
 </div>
 
-<h1 class="text-3xl font-bold underline text-center">
-  {data.activiteit.titel}
-</h1>
+<div class="banner_titel" style="--banner: {data.activiteit.banner}">
+  <h1 class="text-3xl font-bold underline text-center">
+    {data.activiteit.titel}
+  </h1>
+</div>
 
 <!--Beschrijving div-->
 <div class="m-4 divbox rounded-2xl">
@@ -68,7 +70,7 @@
     opacity: 0%;
   }
 
-  .backlink:hover .backtext{
+  .backlink:hover .backtext {
     transition: 400ms;
     color: red;
     opacity: 100%;
@@ -80,12 +82,21 @@
     transition: 400ms;
   }
 
-
   .divbox {
     background-color: rgb(13, 17, 23);
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+  }
+
+  .banner_titel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    background-image: var(--banner);
+    background-attachment: fixed;
+    background-position: center;
   }
 </style>
