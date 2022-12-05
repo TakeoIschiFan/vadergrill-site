@@ -55,7 +55,7 @@
       </p>
     </section>
     <section class="bg-black m-4 rounded-3xl text-center">
-      <a href="/activiteiten" class="text-3xl font-bold underline">Evenementen</a>
+      <a href="/activiteiten" class="text-3xl font-bold underline">Activiteiten</a>
       <div class="p-2"></div>
       {#each data.activiteiten.items as act}
         <div class="grid m-1 grid-cols-2">
