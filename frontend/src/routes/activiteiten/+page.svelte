@@ -30,11 +30,10 @@
 </script>
 
 <div class="maxwidth content-center">
+  <!--Aankomende activiteiten-->
   <h2 class="text-2xl font-bold text-left m-4 text-center">
     Aankomende activiteiten
   </h2>
-  <!-- Main block div for all activities-->
-
   <div class="block">
     {#each data.activiteiten.items as act}
       {#if isTodayorFuture(act.start.slice(0,10))}
@@ -141,17 +140,16 @@
       {/if}
     {/each}
   </div>
+  <!--Voorbije activiteiten-->
   <h2 class="text-2xl font-bold text-left m-4 text-center">
     Voorbije Activiteiten
   </h2>
-  <!-- Main block div for all activities-->
-
-  <div class="block">
+  <div class="grid md:grid-cols-2 sm:grid-cols-1 gap-2">
     {#each data.activiteiten.items as act}
       {#if isPast(act.start.slice(0,10))}
       <a href={"/activiteiten/" + act.slug}>
         <div
-          class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 my-4 mx-auto px-4 py-3 align-middle gap-8 rounded-xl activiteit"
+          class="grid sm:grid-cols-1 lg:grid-cols-3 md:grid-cols-2 my-4 mx-auto px-4 py-3 align-middle gap-8 rounded-xl activiteit"
         >
           <div>
             <p>{act.titel}</p>
@@ -185,67 +183,6 @@
               {maanden[act.start.slice(5, 7) - 1]}
               {act.start.slice(0, 4)}
             </p>
-          </div>
-          <div class="flex gap-2 max-w-xs">
-            <svg
-              width="24px"
-              height="24px"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              x="0px"
-              y="0px"
-              viewBox="0 0 300.988 300.988"
-              style="enable-background:new 0 0 300.988 300.988;"
-              xml:space="preserve"
-              class="clocksvg"
-            >
-              <g>
-                <g>
-                  <path
-                    d="M150.494,0.001C67.511,0.001,0,67.512,0,150.495s67.511,150.493,150.494,150.493s150.494-67.511,150.494-150.493
-			S233.476,0.001,150.494,0.001z M150.494,285.987C75.782,285.987,15,225.206,15,150.495S75.782,15.001,150.494,15.001
-			s135.494,60.782,135.494,135.493S225.205,285.987,150.494,285.987z"
-                    fill="currentcolor"
-                  />
-                  <polygon
-                    points="142.994,142.995 83.148,142.995 83.148,157.995 157.994,157.995 157.994,43.883 142.994,43.883 		"
-                    fill="currentcolor"
-                  />
-                </g>
-                <g />
-                <g />
-                <g />
-                <g />
-                <g />
-                <g />
-                <g />
-                <g />
-                <g />
-                <g />
-                <g />
-                <g />
-                <g />
-                <g />
-                <g />
-              </g>
-              <g />
-              <g />
-              <g />
-              <g />
-              <g />
-              <g />
-              <g />
-              <g />
-              <g />
-              <g />
-              <g />
-              <g />
-              <g />
-              <g />
-              <g />
-            </svg>
-            <p>{act.start.slice(11, 16)}</p>
           </div>
         </div>
       </a>
