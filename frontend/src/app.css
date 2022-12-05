@@ -12,6 +12,7 @@
     --third-red--: rgb(149,1,1);
     --fourth-red--: rgb(130,1,1);
     --transition-duration: 400ms;
+    --max-width: 1200px;
 }
 
 svg {
@@ -199,4 +200,8 @@ a.current {
 
 #clocksvg, #datesvg {
     color: white;
+}
+
+.maxwidth {
+    max-width: var(--max-width);
 }
