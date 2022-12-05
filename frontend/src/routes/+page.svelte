@@ -47,7 +47,7 @@
 <div class="maxwidth">
   <div class="gap-1 grid grid-cols-1 lg:grid-cols-2 relative">
     <section class="bg-red-900 m-4 rounded-3xl text-center">
-      <a class="text-3xl font-bold underline m-4">Over Ons</a>
+      <a href="/over-ons" class="text-3xl font-bold underline m-4">Over Ons</a>
       <div class="p-2"></div>
       <p>
         Wij zijn een Studentenvereniging die zich inzet voor mensen die houden
