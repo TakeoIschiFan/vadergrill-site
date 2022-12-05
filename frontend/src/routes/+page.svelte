@@ -15,6 +15,12 @@
     "November",
     "December",
   ];
+
+  export function isTodayorFuture(date) {
+    const today = new Date();
+    let actdate = new Date(date);
+    return actdate >= today;
+  }
 </script>
 
 <header class="mb-20">
@@ -58,6 +64,7 @@
       <a href="/activiteiten" class="text-3xl font-bold underline">Activiteiten</a>
       <div class="p-2"></div>
       {#each data.activiteiten.items as act}
+      {#if isTodayorFuture(act.start.slice(0,10))}
         <div class="grid m-1 grid-cols-2">
           <p>{act.titel}</p>
           <p>
@@ -66,6 +73,7 @@
             {act.start.slice(0, 4)}
           </p>
         </div>
+        {/if}
       {/each}
     </section>
   </div>
