@@ -1,4 +1,7 @@
 <script>
+  import { dataset_dev } from 'svelte/internal';
+
+
   /** @type {import('./$types').PageData} */
   export let data;
 </script>
@@ -64,6 +67,24 @@
 <h2 class="my-4 text-2xl font-bold">Beschrijving</h2>
 <p class="mb-4">{data.activiteit.beschrijving}</p>
 </div>
+
+<div class="m-4 divbox rounded-2xl">
+  <h2 class="my-4 text-2xl font-bold">Tickets</h2>
+  {#if data.user?.lid === true}
+  <p class="mb-5">
+  Er zijn nog {data.activiteit.max_aantal_tickets - data.activiteit.tickets.length} van de {data.activiteit.max_aantal_tickets} tickets beschikbaar.
+</p>
+<a
+      href="/login"
+      class="py-2 px-4 m-5 relative top-2 bg-red-600 rounded hover:bg-opacity-70 font-bold">
+      Koop een ticket</a>
+  {:else if data.user}
+    Je bent nog geen volwaardig lid. Om tickets te kunnen kopen, moet je lidgeld betaald zijn. Je kan dit in orde brengen door iemand van het praesidium aan te spreken.
+  {:else}
+  <p class="mb-4">Je bent niet ingelogd! Klik <a href="/login">hier</a> om in te loggen.</p>
+  {/if}
+</div>
+  
 
 <style>
   #arrow {
