@@ -1,6 +1,13 @@
 <script>
   /** @type {import('./$types').PageData} */
   export let data;
+  export let banner =
+    "/pocketbase/pb_data/storage/" +
+    data.activiteit.collectionId +
+    "/" +
+    data.activiteit.id +
+    "/" +
+    data.activiteit.banner;
 </script>
 
 <!--Backwards arrow-->
@@ -46,10 +53,12 @@
   >
 </div>
 
-<div class="banner_titel" style="--banner: {data.activiteit.banner}">
+<div class="banner_titel" style="background-image: url({banner});">
   <h1 class="text-3xl font-bold underline text-center">
     {data.activiteit.titel}
   </h1>
+  <p>{banner}</p>
+  <img src="{banner}" alt="">
 </div>
 
 <!--Beschrijving div-->
@@ -95,7 +104,6 @@
     flex-direction: column;
     align-items: center;
     padding: 1em;
-    background-image: var(--banner);
     background-attachment: fixed;
     background-position: center;
   }
