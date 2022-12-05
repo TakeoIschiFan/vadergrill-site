@@ -164,3 +164,7 @@ dist
 *.code-workspace
 
 # End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode
+
+pocketbase/pbdata/logs.db
+pocketbase/pbdata/logs.db-shm
+pocketbase/pbdata/logs.db-wal

@@ -1,5 +1,5 @@
 pocketbase
 pocketbase.exe
-pbdata/logs.db
-pbdata/logs.db-shm
-pbdata/logs.db-wal
+pb_data/logs.db
+pb_data/logs.db-shm
+pb_data/logs.db-wal
