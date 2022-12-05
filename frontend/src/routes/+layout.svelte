@@ -8,10 +8,8 @@
   };
   let current = 0;
 
-  
   export let data;
-  console.log(data)
-
+  console.log(data);
 </script>
 
 <nav class="bg-black">
@@ -98,19 +96,23 @@
           Over Ons
         </a>
         {#if data?.user}
-        <p>ingelogd als {data.user.name}</p>
-        <form action="/logout" method="POST">
-          <button type="submit" class="py-2 px-3 font-bold relative nav-link w-nav-link ">Logout</button>
-        </form>
-        
-       {:else}
-        <a
-        href="/login"
-        class="py-2 px-4 m-5 relative bg-red-600 rounded hover:bg-opacity-70 font-bold"
-        on:click={onClick}
+          <p>ingelogd als {data.user.name}</p>
+          <form action="/logout" method="POST">
+            <button
+              type="submit"
+              class="py-2 px-3 font-bold relative nav-link w-nav-link "
+              >Logout</button
+            >
+          </form>
+        {:else}
+          <a
+            href="/login"
+            class="py-2 px-4 m-5 relative bg-red-600 rounded hover:bg-opacity-70 font-bold"
+            on:click={onClick}
           >
-        Login</a>
-    {/if}
+            Login</a
+          >
+        {/if}
       </div>
     </div>
   </div>
@@ -155,20 +157,24 @@
       </a>
     </div>
     <div class="m-3 md:hidden text-center">
-    {#if data?.user}
-
-    <p>ingelogd als {data.user.name}</p>
-    <form action="/logout" method="POST">
-      <button type="submit" class="py-2 px-3 font-bold relative nav-link w-nav-link ">Logout</button>
-    </form>
-    {:else}
-      <a
-      href="/login"
-      class="py-2 px-4 m-5 relative top-2 bg-red-600 rounded hover:bg-opacity-70 font-bold"
-      on:click={onClick}
+      {#if data?.user}
+        <p>ingelogd als {data.user.name}</p>
+        <form action="/logout" method="POST">
+          <button
+            type="submit"
+            class="py-2 px-3 font-bold relative nav-link w-nav-link "
+            >Logout</button
+          >
+        </form>
+      {:else}
+        <a
+          href="/login"
+          class="py-2 px-4 m-5 relative top-2 bg-red-600 rounded hover:bg-opacity-70 font-bold"
+          on:click={onClick}
         >
-      Login</a>
-    {/if}
+          Login</a
+        >
+      {/if}
     </div>
   </div>
   <!--Small red bar underneath navigation bar-->
@@ -181,5 +187,4 @@
     padding-left: 32px;
     padding-right: 32px;
   }
-
 </style>

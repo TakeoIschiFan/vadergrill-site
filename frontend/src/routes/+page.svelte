@@ -1,3 +1,22 @@
+<script>
+  export let data;
+
+  export let maanden = [
+    "Januari",
+    "Februari",
+    "Maart",
+    "April",
+    "Mei",
+    "Juni",
+    "Juli",
+    "Augustus",
+    "September",
+    "Oktober",
+    "November",
+    "December",
+  ];
+</script>
+
 <header class="mb-20">
   <!--Main headerbox with content and background image-->
   <div id="headerbox">
@@ -28,15 +47,26 @@
 <div class="maxwidth">
   <div class="gap-1 grid grid-cols-1 lg:grid-cols-2 relative">
     <section class="bg-red-900 m-4 rounded-3xl text-center">
-      <h1 class="text-3xl font-bold underline m-4">Over Ons</h1>
+      <a class="text-3xl font-bold underline m-4">Over Ons</a>
+      <div class="p-2"></div>
       <p>
         Wij zijn een Studentenvereniging die zich inzet voor mensen die houden
         van bbq. <br /> Opgericht in het jaar 2022 en nog steeds levend!
       </p>
     </section>
     <section class="bg-black m-4 rounded-3xl text-center">
-      <h1 class="text-3xl font-bold underline m-4">Evenementen</h1>
-      <p>Hier zouden dan een paar Evenementen komen.</p>
+      <a href="/activiteiten" class="text-3xl font-bold underline">Evenementen</a>
+      <div class="p-2"></div>
+      {#each data.activiteiten.items as act}
+        <div class="grid m-1 grid-cols-2">
+          <p>{act.titel}</p>
+          <p>
+            {act.start.slice(8, 10)}
+            {maanden[act.start.slice(5, 7) - 1]}
+            {act.start.slice(0, 4)}
+          </p>
+        </div>
+      {/each}
     </section>
   </div>
 </div>
