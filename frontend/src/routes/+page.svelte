@@ -44,7 +44,8 @@
 <style>
   section {
     align-items: center;
-    width: 90%;
+    width: 95%;
+    height: 100%;
     padding: 25px;
   }
 </style>
