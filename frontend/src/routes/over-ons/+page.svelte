@@ -4,7 +4,7 @@
 </script>
 <h1 class="text-3xl text-white font-bold mt-10 text-center" id="mainname">Praesidium</h1>
 <!-- Grid use for better layout-->
-<div id="wrapper1" class="relative top-12">
+<div class="relative top-12">
   <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 ml-4 mr-4">
     <PraesidiumCard functie="Grill Master" functie2="Praeses" naam="Tom Burgelman"  />
     <PraesidiumCard functie="Grill Leerling" functie2="Vicepraeses" naam="Anton Leagre"  />
