@@ -1,6 +1,5 @@
 <script lang="ts">
   import type { ActionData } from './$types';
-	import DiCode from 'svelte-icons/di/DiCode.svelte';
 	export let form: ActionData;
 
 </script>
