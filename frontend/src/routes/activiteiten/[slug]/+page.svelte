@@ -57,13 +57,11 @@
     >
   </div>
 
-  <div class="banner_titel" style="background-image: url({banner});">
+  <div class="banner_titel" style="background-image: url({data.bannerURL});">
     <h1 class="text-3xl font-bold underline text-center">
       {data.activiteit.titel}
     </h1>
-    <p>{banner}</p>
-    <img src={banner} alt="" />
-  </div>
+    </div>
 
   <!--Beschrijving div-->
   <div class="m-4 divbox rounded-2xl">

@@ -7,7 +7,6 @@ export async function load({ locals, params }) {
         console.log(locals)
         try {
             const act = serializeNonPOJO(await locals.pb.collection("activiteiten").getFirstListItem(`slug="${slug}"`));
-            console.log(act)
             return act;
         } catch (err) { 
             console.log(`Errorr: ${err}`);
@@ -15,7 +14,11 @@ export async function load({ locals, params }) {
         }
     }
 
+    const act = await getActiviteit(params.slug)
+    const bannerURL = locals.pb.getFileUrl(act, act.banner)
+
     return {
-        activiteit: getActiviteit(params.slug)
+        activiteit: act,
+        bannerURL
     };
 };
