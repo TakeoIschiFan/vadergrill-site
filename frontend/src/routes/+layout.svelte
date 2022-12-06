@@ -8,17 +8,15 @@
   };
   let current = 0;
 
-  
   export let data;
-  console.log(data)
-
+  console.log(data);
 </script>
 
 <nav class="bg-black">
-  <div class="mx-auto" id="headerdiv">
+  <div class="mx-auto maxwidth" id="headerdiv">
     <div class="flex justify-between">
       <!--Logo here-->
-      <div>
+      <div class="relative top-1">
         <a href="/" class="flex items-center" on:click={() => (current = 0)}>
           <img src="/vadergrill.svg" class="h-16" alt="" />
           <span
@@ -70,7 +68,7 @@
           </svg>
         </button>
       </div>
-      <!--Dekstop navigation bar for topright-->
+      <!--Dekstop navigation bar-->
       <div class="hidden md:flex md:items-center">
         <a
           href="/"
@@ -97,27 +95,24 @@
         >
           Over Ons
         </a>
-        <a
-          href="/testoverons"
-          class="py-2 px-3 font-bold relative nav-link w-nav-link"
-          style="max-width"
-          class:current={current === 3}
-          on:click={() => (current = 3)}>Test OVer Ons</a
-        >
         {#if data?.user}
-        <p>ingelogd als {data.user.name}</p>
-        <form action="/logout" method="POST">
-          <button type="submit" class="py-2 px-3 font-bold relative nav-link w-nav-link ">Logout</button>
-        </form>
-        
-       {:else}
-        <a
-        href="/login"
-        class="py-2 px-4 m-5 relative top-2 bg-red-600 rounded hover:bg-opacity-70 font-bold"
-        on:click={onClick}
+          <p>ingelogd als {data.user.name}</p>
+          <form action="/logout" method="POST">
+            <button
+              type="submit"
+              class="py-2 px-3 font-bold relative nav-link w-nav-link "
+              >Logout</button
+            >
+          </form>
+        {:else}
+          <a
+            href="/login"
+            class="py-2 px-4 m-5 relative bg-red-600 rounded hover:bg-opacity-70 font-bold"
+            on:click={onClick}
           >
-        Login</a>
-    {/if}
+            Login</a
+          >
+        {/if}
       </div>
     </div>
   </div>
@@ -162,30 +157,24 @@
       </a>
     </div>
     <div class="m-3 md:hidden text-center">
-      <a
-        href="/testoverons"
-        class="py-3 px-3 font-bold relative nav-link w-nav-link"
-        style="max-width"
-        class:current={current === 3}
-        on:click={() => (current = 3)}
-        on:click={onClick}>Test Over Ons</a
-      >
-      </div>
-    <div class="m-3 md:hidden text-center">
-    {#if data?.user}
-
-    <p>ingelogd als {data.user.name}</p>
-    <form action="/logout" method="POST">
-      <button type="submit" class="py-2 px-3 font-bold relative nav-link w-nav-link ">Logout</button>
-    </form>
-    {:else}
-      <a
-      href="/login"
-      class="py-2 px-4 m-5 relative top-2 bg-red-600 rounded hover:bg-opacity-70 font-bold"
-      on:click={onClick}
+      {#if data?.user}
+        <p>ingelogd als {data.user.name}</p>
+        <form action="/logout" method="POST">
+          <button
+            type="submit"
+            class="py-2 px-3 font-bold relative nav-link w-nav-link "
+            >Logout</button
+          >
+        </form>
+      {:else}
+        <a
+          href="/login"
+          class="py-2 px-4 m-5 relative top-2 bg-red-600 rounded hover:bg-opacity-70 font-bold"
+          on:click={onClick}
         >
-      Login</a>
-    {/if}
+          Login</a
+        >
+      {/if}
     </div>
   </div>
   <!--Small red bar underneath navigation bar-->
@@ -198,5 +187,4 @@
     padding-left: 32px;
     padding-right: 32px;
   }
-
 </style>

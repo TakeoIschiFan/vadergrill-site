@@ -12,6 +12,7 @@
     --third-red--: rgb(149,1,1);
     --fourth-red--: rgb(130,1,1);
     --transition-duration: 400ms;
+    --max-width: 1280px;
 }
 
 svg {
@@ -24,15 +25,6 @@ body {
     margin: 0;
     padding: 0;
     transition: background 500ms ease-in-out, color 1000ms ease-in-out;
-}
-
-section {
-    align-items: center;
-    min-height: 250px;
-    min-width: 468px;
-    padding: 25px;
-    width: fit-content;
-    height: fit-content;
 }
 
 /* Header on home page css */
@@ -78,14 +70,6 @@ section {
     padding-top: 20rem;
     padding-bottom: 3.5rem;
     clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
-}
-
-/* Home page extra */
-
-.homepagegrid {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 /*Scrollbar costumization, doesn't work on every browser */
@@ -199,4 +183,11 @@ a.current {
 
 #clocksvg, #datesvg {
     color: white;
+}
+
+/* Max width */
+.maxwidth {
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
 }
