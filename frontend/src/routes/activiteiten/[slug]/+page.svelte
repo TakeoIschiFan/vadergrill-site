@@ -73,12 +73,21 @@
         <span
           style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 33.3333% 0px 0px;"
         />
+        {#if data.bannerURL.slice(-3) == 'jpg'}
         <img
           src={data.bannerURL}
           alt=""
           draggable="false"
           class="absolute box-border inset-0 p-0 border-none m-auto block  w-0 h-0 min-w-full max-w-full min-h-full max-h-full shadow-lg md:rounded-t-lg object-cover"
         />
+        {:else}
+        <img
+        src="/background.jpg"
+        alt="bakcground"
+        draggable="false"
+        class="absolute box-border inset-0 p-0 border-none m-auto block  w-0 h-0 min-w-full max-w-full min-h-full max-h-full shadow-lg md:rounded-t-lg object-cover"
+      />
+      {/if}
       </span>
     </div>
     <!--Little red stroke-->
