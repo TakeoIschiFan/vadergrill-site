@@ -200,6 +200,7 @@
   .activiteit:hover {
     background-color: rgb(90, 1, 1);
     transition: 400ms;
+    transform: scale(1.03);
   }
 
   .datesvg {
