@@ -18,6 +18,14 @@
     "November",
     "December",
   ];
+
+  export function isPast(date) {
+    const today = new Date();
+    let actdate = new Date(date);
+    return actdate < today;
+  }
+
+  export let actdate = data.activiteit.start.slice(8, 10) + maanden[data.activiteit.start.slice(5, 7) - 1] + data.activiteit.start.slice(0, 4)
 </script>
 
 <div class="maxwidth">
@@ -135,9 +143,7 @@
                 /><path d="m15.75 9h3v2.25h-3z" fill="currentcolor" /></svg
               >
               <p>
-                {data.activiteit.start.slice(8, 10)}
-                {maanden[data.activiteit.start.slice(5, 7) - 1]}
-                {data.activiteit.start.slice(0, 4)}
+                {actdate}
               </p>
             </div>
             <div class="flex gap-2 max-w-xs">
@@ -228,10 +234,21 @@
       praesidium aan te spreken.
     {:else}
       <p class="mb-4">
-        Je bent niet ingelogd! Klik <a href="/login">hier</a> om in te loggen.
+        Je bent niet ingelogd! Klik <a href="/login" class="hover:text-red-600 underline">hier</a> om in te loggen.
       </p>
     {/if}
   </div>
+  <!-- Foto's voor activiteit in het verleden-->
+  {#if isPast(actdate)}
+    <div class="m-4 divbox rounded-2xl">
+      <h2 class="my-4 text-2xl font-bold">Foto's</h2>
+      <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-1 m-2">
+        <div class="h-40 w-2/3 bg-red-800 rounded-lg hover:scale-105 img"/>
+        <div class="h-full w-2/3 bg-red-800 rounded-lg hover:scale-105 img"/>
+        <div class="h-full w-2/3 bg-red-800 rounded-lg hover:scale-105 img"/>
+      </div>
+    </div>
+  {/if}
 </div>
 
 <style>
@@ -247,7 +264,7 @@
   }
 
   .backlink:hover .backtext {
-    transition: 400ms;
+    transition: 400ms ease-in-out;
     color: red;
     opacity: 100%;
     transform: translate(0, 0px);
@@ -264,5 +281,9 @@
     padding-right: 1rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+  }
+
+  .img {
+    transition: 400ms ease;
   }
 </style>
