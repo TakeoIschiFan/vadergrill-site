@@ -64,7 +64,7 @@
     >
   </div>
   <!--Top div, gecopieerd van een website https://serbanmihai.com/tavern/whats-the-matter-with-twitter-->
-  <div class="mx-auto block">
+  <div class="mx-auto block p-4">
     <!--image div-->
     <div class="h-full w-full block">
       <span
