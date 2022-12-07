@@ -14,11 +14,18 @@ export async function load({ locals, params }) {
         }
     }
 
-    const act = await getActiviteit(params.slug)
-    const bannerURL = locals.pb.getFileUrl(act, act.banner)
+    const act = await getActiviteit(params.slug);
+    const bannerURL = locals.pb.getFileUrl(act, act.banner);
+    let fotos = act.fotos;
+    let fotosURL = []
+    for (let i = 0; i < fotos.length; i++) {
+        let x = locals.pb.getFileUrl(act, act.fotos[i])
+        fotosURL.push(x)
+    }
 
     return {
         activiteit: act,
-        bannerURL
+        bannerURL,
+        fotosURL
     };
 };

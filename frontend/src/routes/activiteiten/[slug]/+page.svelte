@@ -1,5 +1,5 @@
 <script>
-  import { dataset_dev } from "svelte/internal";
+  import { dataset_dev, each } from "svelte/internal";
 
   /** @type {import('./$types').PageData} */
   export let data;
@@ -25,7 +25,18 @@
     return actdate < today;
   }
 
-  export let actdate = data.activiteit.start.slice(8, 10) + maanden[data.activiteit.start.slice(5, 7) - 1] + data.activiteit.start.slice(0, 4)
+  export function isTodayorFuture(date) {
+    const today = new Date();
+    let actdate = new Date(date);
+    return actdate >= today;
+  }
+
+  export let actdate =
+    data.activiteit.start.slice(8, 10) +
+    " " +
+    maanden[data.activiteit.start.slice(5, 7) - 1] +
+    " " +
+    data.activiteit.start.slice(0, 4);
 </script>
 
 <div class="maxwidth">
@@ -81,21 +92,21 @@
         <span
           style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 33.3333% 0px 0px;"
         />
-        {#if data.bannerURL.slice(-3) == 'jpg'}
-        <img
-          src={data.bannerURL}
-          alt=""
-          draggable="false"
-          class="absolute box-border inset-0 p-0 border-none m-auto block  w-0 h-0 min-w-full max-w-full min-h-full max-h-full shadow-lg md:rounded-t-lg object-cover"
-        />
+        {#if data.bannerURL.slice(-3) == "jpg"}
+          <img
+            src={data.bannerURL}
+            alt=""
+            draggable="false"
+            class="absolute box-border inset-0 p-0 border-none m-auto block  w-0 h-0 min-w-full max-w-full min-h-full max-h-full shadow-lg md:rounded-t-lg object-cover"
+          />
         {:else}
-        <img
-        src="/background.jpg"
-        alt="bakcground"
-        draggable="false"
-        class="absolute box-border inset-0 p-0 border-none m-auto block  w-0 h-0 min-w-full max-w-full min-h-full max-h-full shadow-lg md:rounded-t-lg object-cover"
-      />
-      {/if}
+          <img
+            src="/background.jpg"
+            alt="bakcground"
+            draggable="false"
+            class="absolute box-border inset-0 p-0 border-none m-auto block  w-0 h-0 min-w-full max-w-full min-h-full max-h-full shadow-lg md:rounded-t-lg object-cover"
+          />
+        {/if}
       </span>
     </div>
     <!--Little red stroke-->
@@ -104,8 +115,14 @@
     <div class="md:rounded-b-lg shadow-lg bg-black">
       <div class="grid sm:grid-cols-1 md:grid-cols-2">
         <div class="flex flex-col pl-4 md:pl-8 pr-4 lg:py-6">
-          <h1 class="pb-3 md:text-center sm:text-left font-bold text-2xl lg:text-4xl">{data.activiteit.titel}</h1>
-          <div class="flex flex-row-reverse md:justify-center sm:justify-start ">
+          <h1
+            class="pb-3 md:text-center sm:text-left font-bold text-2xl lg:text-4xl"
+          >
+            {data.activiteit.titel}
+          </h1>
+          <div
+            class="flex flex-row-reverse md:justify-center sm:justify-start "
+          >
             <h2 class="pl-4 text-sm">
               {data.activiteit.beschrijving}
             </h2>
@@ -115,8 +132,12 @@
             />
           </div>
         </div>
-        <div class="flex sm:flex-col-reverse md:flex-col md:pl-8 sm:pl-4 md:pr-8 sm:pr-4 pt-0 pb-4 sm:py-4 lg:py-6 flex-shrink-0">
-          <div class="flex flex-row gap-2 md:flex-col md:justify-between sm:justify-start md:pt-3 sm:pt-0">
+        <div
+          class="flex sm:flex-col-reverse md:flex-col md:pl-8 sm:pl-4 md:pr-8 sm:pr-4 pt-0 pb-4 sm:py-4 lg:py-6 flex-shrink-0"
+        >
+          <div
+            class="flex flex-row gap-2 md:flex-col md:justify-between sm:justify-start md:pt-3 sm:pt-0"
+          >
             <div class="w-6 h-6 bg-transparent" />
             <div class="flex gap-2">
               <svg
@@ -208,11 +229,10 @@
               <p>{data.activiteit.start.slice(11, 16)}</p>
             </div>
           </div>
-          </div>
+        </div>
       </div>
     </div>
   </div>
-
   <!-- Tickets -->
   <div class="m-4 divbox rounded-2xl">
     <h2 class="my-4 text-2xl font-bold">Tickets</h2>
@@ -234,7 +254,10 @@
       praesidium aan te spreken.
     {:else}
       <p class="mb-4">
-        Je bent niet ingelogd! Klik <a href="/login" class="hover:text-red-600 underline">hier</a> om in te loggen.
+        Je bent niet ingelogd! Klik <a
+          href="/login"
+          class="hover:text-red-600 underline">hier</a
+        > om in te loggen.
       </p>
     {/if}
   </div>
@@ -242,10 +265,12 @@
   {#if isPast(actdate)}
     <div class="m-4 divbox rounded-2xl">
       <h2 class="my-4 text-2xl font-bold">Foto's</h2>
-      <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-1 m-2">
-        <div class="h-40 w-2/3 bg-red-800 rounded-lg hover:scale-105 img"/>
-        <div class="h-full w-2/3 bg-red-800 rounded-lg hover:scale-105 img"/>
-        <div class="h-full w-2/3 bg-red-800 rounded-lg hover:scale-105 img"/>
+      <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-2 m-2">
+        {#each data.fotosURL as foto}
+        <div class="rounded-lg hover:scale-105 img">
+          <img src="{foto}" alt="" draggable="false">
+        </div>
+        {/each}
       </div>
     </div>
   {/if}
