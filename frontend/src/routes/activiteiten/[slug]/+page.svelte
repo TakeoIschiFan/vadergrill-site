@@ -3,6 +3,21 @@
 
   /** @type {import('./$types').PageData} */
   export let data;
+
+  export let maanden = [
+    "Januari",
+    "Februari",
+    "Maart",
+    "April",
+    "Mei",
+    "Juni",
+    "Juli",
+    "Augustus",
+    "September",
+    "Oktober",
+    "November",
+    "December",
+  ];
 </script>
 
 <div class="maxwidth">
@@ -48,7 +63,7 @@
       <p class="backtext">Terug</p></a
     >
   </div>
-  <!--Top div-->
+  <!--Top div, gecopieerd van een website https://serbanmihai.com/tavern/whats-the-matter-with-twitter-->
   <div class="mx-auto block">
     <!--image div-->
     <div class="h-full w-full block">
@@ -70,21 +85,116 @@
     <div class="h-1 w-full top-0 bg-gradient-to-r from-red-600 to-red-700" />
     <!-- Description div -->
     <div class="md:rounded-b-lg shadow-lg bg-black">
-      <div class="flex flex-col md:flex-row justify-between">
+      <div class="grid sm:grid-cols-1 md:grid-cols-2">
         <div class="flex flex-col pl-4 md:pl-8 pr-4 lg:py-6">
           <h1 class="pb-3 md:text-center sm:text-left font-bold text-2xl lg:text-4xl">{data.activiteit.titel}</h1>
-          <div class="flex md:justify-center sm:justify-start ">
+          <div class="flex flex-row-reverse md:justify-center sm:justify-start ">
+            <h2 class="pl-4 text-sm">
+              {data.activiteit.beschrijving}
+            </h2>
             <div
-              class="absolute h-full z-10 ml-0.5 left-0 bg-gradient-to-r from-red-600 to-red-700 rounded shadow-md"
+              class="relative h-full z-10 ml-0.5 left-0 bg-gradient-to-r from-red-600 to-red-700 rounded shadow-md"
               style="width: 3px;"
             />
-            <p>
-              {data.activiteit.beschrijving}
-            </p>
           </div>
         </div>
+        <div class="flex sm:flex-col-reverse md:flex-col md:pl-8 sm:pl-4 md:pr-8 sm:pr-4 pt-0 pb-4 sm:py-4 lg:py-6 flex-shrink-0">
+          <div class="flex flex-row gap-2 md:flex-col md:justify-between sm:justify-start md:pt-3 sm:pt-0">
+            <div class="w-6 h-6 bg-transparent" />
+            <div class="flex gap-2">
+              <svg
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                class="datesvg"
+                ><path
+                  d="m22 2.25h-3.25v-1.5c-.014-.404-.344-.726-.75-.726s-.736.322-.75.725v.001 1.5h-4.5v-1.5c-.014-.404-.344-.726-.75-.726s-.736.322-.75.725v.001 1.5h-4.5v-1.5c-.014-.404-.344-.726-.75-.726s-.736.322-.75.725v.001 1.5h-3.25c-1.104 0-2 .895-2 1.999v17.75c0 1.105.895 2 2 2h20c1.105 0 2-.895 2-2v-17.75c0-1.104-.896-1.999-2-1.999zm.5 19.75c0 .276-.224.499-.499.5h-20.001c-.276 0-.5-.224-.5-.5v-17.75c.001-.276.224-.499.5-.499h3.25v1.5c.014.404.344.726.75.726s.736-.322.75-.725v-.001-1.5h4.5v1.5c.014.404.344.726.75.726s.736-.322.75-.725v-.001-1.5h4.5v1.5c.014.404.344.726.75.726s.736-.322.75-.725v-.001-1.5h3.25c.276 0 .499.224.499.499z"
+                  fill="currentcolor"
+                /><path d="m5.25 9h3v2.25h-3z" fill="currentcolor" /><path
+                  d="m5.25 12.75h3v2.25h-3z"
+                  fill="currentcolor"
+                /><path d="m5.25 16.5h3v2.25h-3z" fill="currentcolor" /><path
+                  d="m10.5 16.5h3v2.25h-3z"
+                  fill="currentcolor"
+                /><path d="m10.5 12.75h3v2.25h-3z" fill="currentcolor" /><path
+                  d="m10.5 9h3v2.25h-3z"
+                  fill="currentcolor"
+                /><path d="m15.75 16.5h3v2.25h-3z" fill="currentcolor" /><path
+                  d="m15.75 12.75h3v2.25h-3z"
+                  fill="currentcolor"
+                /><path d="m15.75 9h3v2.25h-3z" fill="currentcolor" /></svg
+              >
+              <p>
+                {data.activiteit.start.slice(8, 10)}
+                {maanden[data.activiteit.start.slice(5, 7) - 1]}
+                {data.activiteit.start.slice(0, 4)}
+              </p>
+            </div>
+            <div class="flex gap-2 max-w-xs">
+              <svg
+                width="24px"
+                height="24px"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 300.988 300.988"
+                style="enable-background:new 0 0 300.988 300.988;"
+                xml:space="preserve"
+                class="clocksvg"
+              >
+                <g>
+                  <g>
+                    <path
+                      d="M150.494,0.001C67.511,0.001,0,67.512,0,150.495s67.511,150.493,150.494,150.493s150.494-67.511,150.494-150.493
+        S233.476,0.001,150.494,0.001z M150.494,285.987C75.782,285.987,15,225.206,15,150.495S75.782,15.001,150.494,15.001
+        s135.494,60.782,135.494,135.493S225.205,285.987,150.494,285.987z"
+                      fill="currentcolor"
+                    />
+                    <polygon
+                      points="142.994,142.995 83.148,142.995 83.148,157.995 157.994,157.995 157.994,43.883 142.994,43.883 		"
+                      fill="currentcolor"
+                    />
+                  </g>
+                  <g />
+                  <g />
+                  <g />
+                  <g />
+                  <g />
+                  <g />
+                  <g />
+                  <g />
+                  <g />
+                  <g />
+                  <g />
+                  <g />
+                  <g />
+                  <g />
+                  <g />
+                </g>
+                <g />
+                <g />
+                <g />
+                <g />
+                <g />
+                <g />
+                <g />
+                <g />
+                <g />
+                <g />
+                <g />
+                <g />
+                <g />
+                <g />
+                <g />
+              </svg>
+              <p>{data.activiteit.start.slice(11, 16)}</p>
+            </div>
+          </div>
+          </div>
       </div>
-      <div />
     </div>
   </div>
 
