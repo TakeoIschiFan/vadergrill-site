@@ -94,7 +94,7 @@
   section {
     align-items: center;
     width: 95%;
-    height: 100%;
+    height: fit-content;
     padding: 25px;
   }
 </style>

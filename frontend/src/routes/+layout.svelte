@@ -182,6 +182,26 @@
 </nav>
 <slot />
 
+
+<!-- Footer -->
+<footer>
+  <div class="bg-black w-full h-auto">
+    <div class="maxwidth grid md:grid-cols-2 sm:grid-cols-1 justify-between">
+      <div class="flex flex-row p-4 items-center align-middle">
+        <img src="/vadergrill.svg" class="h-16 mx-2" alt="" />
+        <p>
+          Vader Grill
+        </p>
+      </div>
+      <div>
+        <p>
+          Hier komen de social links (met svgs)
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
 <style>
   #headerdiv {
     padding-left: 32px;

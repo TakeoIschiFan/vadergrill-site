@@ -29,6 +29,6 @@
 <style>
     .praesidiumkaart:hover {
         transform: scale(1.05);
-        transition: 400ms;
+        transition: 400ms ease-in-out;
     }
 </style>
