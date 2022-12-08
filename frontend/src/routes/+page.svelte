@@ -54,25 +54,36 @@
   <div class="gap-1 grid grid-cols-1 lg:grid-cols-2 relative">
     <section class="bg-red-900 m-4 rounded-3xl text-center">
       <a href="/over-ons" class="text-3xl font-bold underline m-4">Over Ons</a>
-      <div class="p-2"></div>
+      <div class="p-2" />
       <p>
         Wij zijn een Studentenvereniging die zich inzet voor mensen die houden
         van bbq. <br /> Opgericht in het jaar 2022 en nog steeds levend!
       </p>
+      <h1 class="text-3xl font-bold underline m-4">Ons Verhaal</h1>
+      <p>
+        Het ontstaan van onze studentenvereniging is een mooi verhaal. Het begon
+        allemaal toen we samen studeerden in de bibliotheek op de sterre. We
+        hadden het over allemaal leuke studentenkringen in Gent en dat er
+        momenteel toch iets ontbreekte, namelijk een kring die zich inzet voor
+        mensen die houden van BBQ. Dus moesten we daar iets aan doen en een paar
+        weken later werd Vader Grill officieel opgericht.
+      </p>
     </section>
     <section class="bg-black m-4 rounded-3xl text-center">
-      <a href="/activiteiten" class="text-3xl font-bold underline">Activiteiten</a>
-      <div class="p-2"></div>
+      <a href="/activiteiten" class="text-3xl font-bold underline"
+        >Activiteiten</a
+      >
+      <div class="p-2" />
       {#each data.activiteiten.items as act}
-      {#if isTodayorFuture(act.start.slice(0,10))}
-        <div class="grid m-1 grid-cols-2">
-          <p>{act.titel}</p>
-          <p>
-            {act.start.slice(8, 10)}
-            {maanden[act.start.slice(5, 7) - 1]}
-            {act.start.slice(0, 4)}
-          </p>
-        </div>
+        {#if isTodayorFuture(act.start.slice(0, 10))}
+          <div class="grid m-1 grid-cols-2">
+            <p>{act.titel}</p>
+            <p>
+              {act.start.slice(8, 10)}
+              {maanden[act.start.slice(5, 7) - 1]}
+              {act.start.slice(0, 4)}
+            </p>
+          </div>
         {/if}
       {/each}
     </section>
