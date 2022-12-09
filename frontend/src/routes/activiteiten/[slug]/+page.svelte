@@ -123,7 +123,7 @@
           <div
             class="flex flex-row-reverse md:justify-center sm:justify-start "
           >
-            <h2 class="pl-4 text-sm">
+            <h2 class="pl-4 text-sm mb-1">
               {data.activiteit.beschrijving}
             </h2>
             <div

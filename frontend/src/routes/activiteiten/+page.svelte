@@ -29,7 +29,7 @@
   }
 </script>
 
-<div class="maxwidth content-center">
+<div class="maxwidth content-center h-screen">
   <!--Aankomende activiteiten-->
   <h2 class="text-2xl font-bold text-left m-4 text-center">
     Aankomende activiteiten
