@@ -4,9 +4,16 @@
   export let data;
 </script>
 
-<h1 class="text-3xl text-white font-bold mt-10 text-center" id="mainname">
-  Praesidium
-</h1>
+<div class="flex flex-col gap-2 items-center mt-4">
+  <h2 class="text-3xl font-bold text-center">
+    Praesidium
+  </h2>
+  <div class="h-1 w-1/4 top-0 bg-gradient-to-r from-red-600 to-red-700" />
+  </div>
+  {#each data.bestuur.items as lid}
+  <p>{lid.naam}</p>
+    
+  {/each}
 <!-- Grid use for better layout-->
 <div class="relative top-12 mx-2 mb-20">
   <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 ml-4 mr-4">
