@@ -31,10 +31,13 @@
 
 <div class="maxwidth content-center min-h-screen">
   <!--Aankomende activiteiten-->
-  <h2 class="text-2xl font-bold m-4 text-center">
-    Aankomende activiteiten
+  <div class="flex flex-col gap-2 items-center mt-4">
+  <h2 class="text-2xl font-bold text-center">
+    Aankomende Activiteiten
   </h2>
-  <div class="block">
+  <div class="h-1 w-1/4 top-0 bg-gradient-to-r from-red-600 to-red-700" />
+  </div>
+  <div class="block aankomende">
     {#each data.activiteiten.items as act}
       {#if isTodayorFuture(act.start.slice(0,10))}
       <a href={"/activiteiten/" + act.slug}>
@@ -141,9 +144,12 @@
     {/each}
   </div>
   <!--Voorbije activiteiten-->
-  <h2 class="text-2xl font-bold text-left m-4 text-center">
-    Voorbije Activiteiten
-  </h2>
+  <div class="flex flex-col gap-2 items-center mt-4">
+    <h2 class="text-2xl font-bold text-center">
+      Voorbije Activiteiten
+    </h2>
+    <div class="h-1 w-1/4 top-0 bg-gradient-to-r from-red-600 to-red-700" />
+    </div>
   <div class="grid md:grid-cols-2 sm:grid-cols-1 gap-2">
     {#each data.activiteiten.items as act}
       {#if isPast(act.start.slice(0,10))}
@@ -201,6 +207,10 @@
     background-color: rgb(90, 1, 1);
     transition: 400ms;
     transform: scale(1.03);
+  }
+
+  .aankomende {
+    min-height: 50vh;
   }
 
   .datesvg {
