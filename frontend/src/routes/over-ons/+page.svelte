@@ -15,12 +15,12 @@
   <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 ml-4 mr-4">
     {#each data.bestuur.items as lid}
       <div class="relative z-10 bg-black rounded-lg right-0.5 praesidiumkaart">
-        <div class="grid grid-cols-2 gap-1 h-80">
+        <div class="grid grid-cols-2 gap-1 h-96">
           <img
             src="{pb.getFileUrl(lid, lid.foto)}"
             alt="{lid.naam}"
             draggable="false"
-            class="absolute -z-10 border-none w-full h-80 rounded-lg object-cover"
+            class="absolute -z-10 border-none w-full h-96 rounded-lg object-cover"
           />
           <div class="ml-5 mt-5">
             <h1 class="relative w-full flex text-2xl font-semibold text-white headertext">
