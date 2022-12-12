@@ -29,9 +29,9 @@
   }
 </script>
 
-<div class="maxwidth content-center h-screen">
+<div class="maxwidth content-center min-h-screen">
   <!--Aankomende activiteiten-->
-  <h2 class="text-2xl font-bold text-left m-4 text-center">
+  <h2 class="text-2xl font-bold m-4 text-center">
     Aankomende activiteiten
   </h2>
   <div class="block">
