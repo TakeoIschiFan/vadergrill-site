@@ -194,6 +194,7 @@
         </div>
       </div>
       <div class="flex flex-row items-center justify-left gap-4">
+        <a href="https://www.instagram.com/vader_grill/">
         <svg
           class="w-5 h-5 instagram"
           viewBox="0 0 24 24"
@@ -204,6 +205,8 @@
             fill="currentcolor"
           /></svg
         >
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100087175883410">
         <svg
           class="w-5 h-5 facebook"
           viewBox="0 0 24 24"
@@ -214,6 +217,7 @@
             fill="currentcolor"
           /></svg
         >
+        </a>
       </div>
     </div>
   </div>
