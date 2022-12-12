@@ -190,7 +190,7 @@
         <img src="/vadergrill.svg" class="h-16" alt="" />
         <div class="flex flex-col gap-2">
           <p>Vader Grill</p>
-          <a href="/" class="underline text-xs hover:text-red-600">Privacy Policy</a>
+          <a href="/privacy" class="underline text-xs hover:text-red-600">Privacy Policy</a>
         </div>
       </div>
       <div class="flex flex-row items-center justify-left gap-4">

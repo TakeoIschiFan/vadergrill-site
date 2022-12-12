@@ -6,7 +6,7 @@
   Praesidium
 </h1>
 <!-- Grid use for better layout-->
-<div class="relative top-12 mx-2 mb-8">
+<div class="relative top-12 mx-2 mb-20">
   <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 ml-4 mr-4">
     <PraesidiumCard
       functie="Grill Master"
