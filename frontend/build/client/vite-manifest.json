@@ -1,0 +1,231 @@
+{
+  "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
+    "file": "_app/immutable/start-2a681276.js",
+    "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
+    "isEntry": true,
+    "imports": [
+      "_index-a04286cd.js",
+      "_control-03134885.js"
+    ],
+    "dynamicImports": [
+      ".svelte-kit/generated/nodes/0.js",
+      ".svelte-kit/generated/nodes/1.js",
+      ".svelte-kit/generated/nodes/2.js",
+      ".svelte-kit/generated/nodes/3.js",
+      ".svelte-kit/generated/nodes/4.js",
+      ".svelte-kit/generated/nodes/5.js",
+      ".svelte-kit/generated/nodes/6.js",
+      ".svelte-kit/generated/nodes/7.js",
+      ".svelte-kit/generated/nodes/8.js"
+    ]
+  },
+  "src/routes/+layout.svelte": {
+    "file": "_app/immutable/components/pages/_layout.svelte-f00e356f.js",
+    "src": "src/routes/+layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-a04286cd.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_layout-a8036053.css",
+      "_app/immutable/assets/app-e1ff4f24.css"
+    ]
+  },
+  "src/routes/+error.svelte": {
+    "file": "_app/immutable/components/pages/_error.svelte-1b0c9050.js",
+    "src": "src/routes/+error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-a04286cd.js",
+      "_control-03134885.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_error-7fb4a8ac.css",
+      "_app/immutable/assets/app-e1ff4f24.css"
+    ]
+  },
+  "src/routes/+page.svelte": {
+    "file": "_app/immutable/components/pages/_page.svelte-822f7631.js",
+    "src": "src/routes/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-a04286cd.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-a7910f48.css"
+    ]
+  },
+  "src/routes/activiteiten/+page.svelte": {
+    "file": "_app/immutable/components/pages/activiteiten/_page.svelte-061a78f7.js",
+    "src": "src/routes/activiteiten/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-a04286cd.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-cacda0bd.css"
+    ]
+  },
+  "src/routes/activiteiten/[slug]/+page.svelte": {
+    "file": "_app/immutable/components/pages/activiteiten/_slug_/_page.svelte-86bc7bdc.js",
+    "src": "src/routes/activiteiten/[slug]/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-a04286cd.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-3c3972d5.css"
+    ]
+  },
+  "src/routes/login/+page.svelte": {
+    "file": "_app/immutable/components/pages/login/_page.svelte-73d55225.js",
+    "src": "src/routes/login/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-a04286cd.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-38adcfc9.css"
+    ]
+  },
+  "src/routes/over-ons/+page.svelte": {
+    "file": "_app/immutable/components/pages/over-ons/_page.svelte-4ea03265.js",
+    "src": "src/routes/over-ons/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-a04286cd.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-18cff725.css"
+    ]
+  },
+  "src/routes/register/+page.svelte": {
+    "file": "_app/immutable/components/pages/register/_page.svelte-82f01787.js",
+    "src": "src/routes/register/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-a04286cd.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-38adcfc9.css"
+    ]
+  },
+  "src/routes/woordenboek/+page.svelte": {
+    "file": "_app/immutable/components/pages/woordenboek/_page.svelte-172f0b72.js",
+    "src": "src/routes/woordenboek/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-a04286cd.js"
+    ]
+  },
+  "_index-a04286cd.js": {
+    "file": "_app/immutable/chunks/index-a04286cd.js"
+  },
+  "_control-03134885.js": {
+    "file": "_app/immutable/chunks/control-03134885.js"
+  },
+  ".svelte-kit/generated/nodes/0.js": {
+    "file": "_app/immutable/chunks/0-c413e71b.js",
+    "src": ".svelte-kit/generated/nodes/0.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/+layout.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/1.js": {
+    "file": "_app/immutable/chunks/1-d5184443.js",
+    "src": ".svelte-kit/generated/nodes/1.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/+error.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/2.js": {
+    "file": "_app/immutable/chunks/2-e8d4a055.js",
+    "src": ".svelte-kit/generated/nodes/2.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/3.js": {
+    "file": "_app/immutable/chunks/3-0d69512d.js",
+    "src": ".svelte-kit/generated/nodes/3.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/activiteiten/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/4.js": {
+    "file": "_app/immutable/chunks/4-9a0dfa73.js",
+    "src": ".svelte-kit/generated/nodes/4.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/activiteiten/[slug]/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/5.js": {
+    "file": "_app/immutable/chunks/5-8ac0a37c.js",
+    "src": ".svelte-kit/generated/nodes/5.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/login/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/6.js": {
+    "file": "_app/immutable/chunks/6-a30f9a44.js",
+    "src": ".svelte-kit/generated/nodes/6.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/over-ons/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/7.js": {
+    "file": "_app/immutable/chunks/7-2202e543.js",
+    "src": ".svelte-kit/generated/nodes/7.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/register/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/8.js": {
+    "file": "_app/immutable/chunks/8-5dc684df.js",
+    "src": ".svelte-kit/generated/nodes/8.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/woordenboek/+page.svelte"
+    ]
+  },
+  "src/routes/+layout.css": {
+    "file": "_app/immutable/assets/_layout-a8036053.css",
+    "src": "src/routes/+layout.css"
+  },
+  "app.css": {
+    "file": "_app/immutable/assets/app-e1ff4f24.css",
+    "src": "app.css"
+  },
+  "src/routes/activiteiten/[slug]/+page.css": {
+    "file": "_app/immutable/assets/_page-3c3972d5.css",
+    "src": "src/routes/activiteiten/[slug]/+page.css"
+  },
+  "src/routes/login/+page.css": {
+    "file": "_app/immutable/assets/_page-38adcfc9.css",
+    "src": "src/routes/login/+page.css"
+  },
+  "src/routes/+page.css": {
+    "file": "_app/immutable/assets/_page-a7910f48.css",
+    "src": "src/routes/+page.css"
+  },
+  "src/routes/activiteiten/+page.css": {
+    "file": "_app/immutable/assets/_page-cacda0bd.css",
+    "src": "src/routes/activiteiten/+page.css"
+  },
+  "src/routes/+error.css": {
+    "file": "_app/immutable/assets/_error-7fb4a8ac.css",
+    "src": "src/routes/+error.css"
+  },
+  "src/routes/over-ons/+page.css": {
+    "file": "_app/immutable/assets/_page-18cff725.css",
+    "src": "src/routes/over-ons/+page.css"
+  }
+}
