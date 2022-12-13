@@ -6,7 +6,7 @@
   import "../app.css";
 </script>
 
-<div id="error">
+<div id="error" class="min-h-screen">
   <h2>Oopsies</h2>
   <p>{message}</p>
   <p>Head back <a href="/" class="underline">Home</a></p>

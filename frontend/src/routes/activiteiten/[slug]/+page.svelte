@@ -123,7 +123,7 @@
           <div
             class="flex flex-row-reverse md:justify-center sm:justify-start "
           >
-            <h2 class="pl-4 text-sm">
+            <h2 class="pl-4 text-sm mb-1">
               {data.activiteit.beschrijving}
             </h2>
             <div
@@ -234,6 +234,7 @@
     </div>
   </div>
   <!-- Tickets -->
+  {#if isTodayorFuture(actdate)}
   <div class="m-4 divbox rounded-2xl">
     <h2 class="my-4 text-2xl font-bold">Tickets</h2>
     {#if data.user?.lid === true}
@@ -261,6 +262,7 @@
       </p>
     {/if}
   </div>
+  {/if}
   <!-- Foto's voor activiteit in het verleden-->
   {#if isPast(actdate)}
     <div class="m-4 divbox rounded-2xl">

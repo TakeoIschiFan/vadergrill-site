@@ -1,62 +1,47 @@
 <script>
   import PraesidiumCard from "$lib/components/praesidiumCard.svelte";
+  import { each } from "svelte/internal";
+  import PocketBase from 'pocketbase';
+  export let data;
+  export const pb = new PocketBase('http://127.0.0.1:8090');
 </script>
 
-<h1 class="text-3xl text-white font-bold mt-10 text-center" id="mainname">
-  Praesidium
-</h1>
+<div class="flex flex-col gap-2 items-center mt-4">
+  <h2 class="text-3xl font-bold text-center">Praesidium</h2>
+  <div class="h-1 w-1/4 top-0 bg-gradient-to-r from-red-600 to-red-700" />
+</div>
 <!-- Grid use for better layout-->
-<div class="relative top-12">
+<div class="relative top-12 mx-2 mb-20">
   <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 ml-4 mr-4">
-    <PraesidiumCard
-      functie="Grill Master"
-      functie2="Praeses"
-      naam="Tom Burgelman"
-    />
-    <PraesidiumCard
-      functie="Grill Leerling"
-      functie2="Vicepraeses"
-      naam="Anton Leagre"
-    />
-    <PraesidiumCard
-      functie="Leverancier"
-      functie2="Quaestor"
-      naam="Phileas Massun"
-    />
-    <PraesidiumCard
-      functie="Slager"
-      functie2="Schachtentemmer"
-      naam="Fangio Decaluwe"
-    />
-    <PraesidiumCard
-      functie="Amadeus"
-      functie2="Cantor"
-      naam="Ferre Despierre"
-    />
-    <PraesidiumCard
-      functie="Lookboter"
-      functie2="Cultuur"
-      naam="Sibylle Bosschaert"
-    />
-    <PraesidiumCard
-      functie="Mayonaise"
-      functie2="Socials"
-      naam="Fedra Moeykens"
-    />
-    <PraesidiumCard
-      functie="Balletjes"
-      functie2="Feest"
-      naam="Kobe Degeetere"
-    />
-    <PraesidiumCard
-      functie="Entrecote"
-      functie2="Sport"
-      naam="Yari De Backer"
-    />
-    <PraesidiumCard
-      functie="Entrecote"
-      functie2="Sport"
-      naam="Mattheo Vereertbrugghen"
-    />
+    {#each data.bestuur.items as lid}
+      <div class="relative z-10 bg-black rounded-lg right-0.5 praesidiumkaart">
+        <div class="grid grid-cols-2 gap-1 h-96">
+          <img
+            src="{pb.getFileUrl(lid, lid.foto)}"
+            alt="{lid.naam}"
+            draggable="false"
+            class="absolute -z-10 border-none w-full h-96 rounded-lg object-cover"
+          />
+          <div class="ml-5 mt-5">
+            <h1 class="relative w-full flex text-2xl font-semibold text-white headertext">
+              {lid.bijnaam}
+            </h1>
+            <h3 class="relative w-full flex text-m font-light text-white headertext">
+              {lid.functie}
+            </h3>
+            <h2 class="relative w-full flex text-xl font-light text-white headertext">
+              {lid.naam}
+            </h2>
+          </div>
+        </div>
+      </div>
+    {/each}
   </div>
 </div>
+
+<style>
+  .praesidiumkaart:hover {
+    transform: scale(1.05);
+    transition: 400ms ease-in-out;
+  }
+</style>

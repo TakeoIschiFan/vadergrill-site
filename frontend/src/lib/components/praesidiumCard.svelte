@@ -2,7 +2,6 @@
     export let functie: string;
     export let functie2: string;
     export let naam: string;
-    export let image: string?
 </script>
 <div class="relative z-10 bg-black rounded-lg right-0.5 praesidiumkaart">
 <div class="grid grid-cols-2 gap-1">
@@ -29,6 +28,6 @@
 <style>
     .praesidiumkaart:hover {
         transform: scale(1.05);
-        transition: 400ms;
+        transition: 400ms ease-in-out;
     }
 </style>
