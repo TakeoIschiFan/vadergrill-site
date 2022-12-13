@@ -185,7 +185,7 @@
 <!-- Footer -->
 <footer>
   <div class="bg-black w-full h-auto">
-    <div class="maxwidth grid md:grid-cols-2 sm:grid-cols-1 justify-between">
+    <div class="maxwidth grid grid-cols-1 md:grid-cols-2 justify-between">
       <div class="flex flex-row p-4 items-center justify-center gap-4">
         <img src="/vadergrill.svg" class="h-16" alt="" />
         <div class="flex flex-col gap-2">
@@ -195,8 +195,7 @@
           >
         </div>
       </div>
-
-      <div class="flex flex-row items-center justify-left gap-4">
+      <div class="flex flex-row items-center justify-center md:justify-start mb-8 mt-4 md:m-0 gap-4">
         <a href="https://www.instagram.com/vader_grill/">
           <svg
             class="w-5 h-5 instagram"
