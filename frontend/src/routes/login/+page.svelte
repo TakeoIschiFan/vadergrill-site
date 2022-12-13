@@ -5,7 +5,7 @@
 </script>
 
 
-<div class="flex flex-col items-center h-full w-full pt-12">
+<div class="flex flex-col items-center h-full w-full pt-12 maxwidth min-h-screen">
 	<div class="w-24 mb-10 text-primary">
     <img src="/vadergrill.svg" alt="vader grill logo" class="w-24" />
 	</div>
@@ -13,7 +13,7 @@
 		Login in bij Vader Grill
 	</h2>
 	<p class="text-center mt-1">
-		Of <a href="/register" class="text-primary font-medium hover:cursor-pointer">registreer</a> als u nog geen account hebt.
+		Of <a href="/register" class="text-primary underline hover:text-red-600 font-medium hover:cursor-pointer">registreer</a> als u nog geen account hebt.
 	</p>
 	<form method="POST" action="?/login" class="flex flex-col items-center space-y-2 w-full mt-4">
 		<div class="form-control w-full max-w-md">
@@ -36,7 +36,7 @@
 		<div class="w-full max-w-md">
 			<a
 				href="/reset-password"
-				class="font-medium hover:cursor-pointer hover:underline"
+				class="font-medium hover:cursor-pointer underline hover:text-red-600"
 			>
 				Forgot Password?
 			</a>
