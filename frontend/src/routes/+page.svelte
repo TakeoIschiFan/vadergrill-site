@@ -21,13 +21,16 @@
     let actdate = new Date(date);
     return actdate >= today;
   }
+
+  import imgUrl from '../assets/background.jpg'
+  import vg from "../assets/vadergrill.svg"
 </script>
 
 <header class="mb-20">
   <!--Main headerbox with content and background image-->
-  <div id="headerbox">
+  <div id="headerbox" style="background-image: url({imgUrl});">
     <img
-      src="vadergrill.svg"
+      src={vg}
       id="headerlogo"
       height="170px"
       width="170px"
@@ -97,4 +100,20 @@
     height: fit-content;
     padding: 25px;
   }
+
+  #headerbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    clip-path: polygon(50% 0%, 100% 0, 100% 73%, 50% 100%, 0 73%, 0 0);
+    
+    background-attachment: fixed;
+    background-position: center;
+    padding-bottom: 3.5em;
+}
+
+#headerlogo {
+    margin: 2em 0 0;
+}
 </style>

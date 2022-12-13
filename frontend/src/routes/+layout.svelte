@@ -10,6 +10,9 @@
 
   export let data;
   console.log(data);
+
+  import vg from "../assets/vadergrill.svg"
+
 </script>
 
 <nav class="bg-black">
@@ -18,7 +21,7 @@
       <!--Logo here-->
       <div class="relative top-1">
         <a href="/" class="flex items-center" on:click={() => (current = 0)}>
-          <img src="/vadergrill.svg" class="h-16" alt="" />
+          <img src="{vg}" class="h-16" alt="" />
           <span
             class="font-bold self-center text-xl whitespace-nowrap py-2 px-3 hover:text-red-600"
             >Vader Grill</span

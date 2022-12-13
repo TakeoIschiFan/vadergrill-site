@@ -1,0 +1,1 @@
+{"version":3,"file":"vadergrill-6b5037d1.js","sources":["../../../.svelte-kit/adapter-node/chunks/vadergrill.js"],"sourcesContent":["const vg = \"/_app/immutable/assets/vadergrill-63ec85a8.svg\";\nexport {\n  vg as v\n};\n"],"names":[],"mappings":"AAAK,MAAC,EAAE,GAAG;;;;"}
