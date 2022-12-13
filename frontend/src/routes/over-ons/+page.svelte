@@ -1,9 +1,7 @@
 <script>
   import PraesidiumCard from "$lib/components/praesidiumCard.svelte";
   import { each } from "svelte/internal";
-  import PocketBase from 'pocketbase';
   export let data;
-  export const pb = new PocketBase('http://127.0.0.1:8090');
 </script>
 
 <div class="flex flex-col gap-2 items-center mt-4">
@@ -17,7 +15,7 @@
       <div class="relative z-10 bg-black rounded-lg right-0.5 praesidiumkaart">
         <div class="grid grid-cols-2 gap-1 h-96">
           <img
-            src="{pb.getFileUrl(lid, lid.foto)}"
+            src="{lid.fotoUrl}"
             alt="{lid.naam}"
             draggable="false"
             class="absolute -z-10 border-none w-full h-96 rounded-lg object-cover"

@@ -7,6 +7,10 @@ export const serializeNonPOJO = (object: any) => {
     return structuredClone(object);
 };
 
+export const checkProd = (str: string) => {
+	return str.replace("http://127.0.0.1:8090/", "vadergrill.be")
+};
+
 export const validateData = async <T extends z.ZodTypeAny>(
 	formData: FormData,
 	schema: T,
