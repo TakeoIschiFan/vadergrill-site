@@ -11,8 +11,7 @@
   export let data;
   console.log(data);
 
-  import vg from "../assets/vadergrill.svg"
-
+  import vg from "../assets/vadergrill.svg";
 </script>
 
 <nav class="bg-black">
@@ -21,7 +20,7 @@
       <!--Logo here-->
       <div class="relative top-1">
         <a href="/" class="flex items-center" on:click={() => (current = 0)}>
-          <img src="{vg}" class="h-16" alt="" />
+          <img src={vg} class="h-16" alt="" />
           <span
             class="font-bold self-center text-xl whitespace-nowrap py-2 px-3 hover:text-red-600"
             >Vader Grill</span
@@ -190,7 +189,7 @@
   <div class="bg-black w-full h-auto">
     <div class="maxwidth grid grid-cols-1 md:grid-cols-2 justify-between">
       <div class="flex flex-row p-4 items-center justify-center gap-4">
-        <img src="/vadergrill.svg" class="h-16" alt="" />
+        <img src={vg} class="h-16" alt="" />
         <div class="flex flex-col gap-2">
           <p>Vader Grill</p>
           <a href="/privacy" class="underline text-xs hover:text-red-600"
@@ -198,7 +197,9 @@
           >
         </div>
       </div>
-      <div class="flex flex-row items-center justify-center md:justify-start mb-8 mt-4 md:m-0 gap-4">
+      <div
+        class="flex flex-row items-center justify-center md:justify-start mb-8 mt-4 md:m-0 gap-4"
+      >
         <a href="https://www.instagram.com/vader_grill/">
           <svg
             class="w-5 h-5 instagram"
