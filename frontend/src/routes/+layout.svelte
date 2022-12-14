@@ -6,6 +6,10 @@
   export let onClick = () => {
     BurgerOpen = !BurgerOpen;
   };
+
+  export let loginerr = () => {
+    alert("Sorry, de Login is nog in opmaak");
+  };
   let current = 0;
 
   export let data;
@@ -108,9 +112,10 @@
           </form>
         {:else}
           <a
-            href="/login"
+            href="/"
             class="py-2 px-4 m-5 relative bg-red-600 rounded hover:bg-opacity-70 font-bold"
             on:click={onClick}
+            on:click={loginerr}
           >
             Login</a
           >
@@ -170,9 +175,10 @@
         </form>
       {:else}
         <a
-          href="/login"
+          href="/"
           class="py-2 px-4 m-5 relative top-2 bg-red-600 rounded hover:bg-opacity-70 font-bold"
           on:click={onClick}
+          on:click={loginerr}
         >
           Login</a
         >

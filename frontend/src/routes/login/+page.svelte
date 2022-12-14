@@ -1,13 +1,14 @@
 <script lang="ts">
 	import type { ActionData } from "./$types";
 	export let form: ActionData;
+	import vg from "/src/assets/vadergrill.svg";
 </script>
 
 <div
 	class="flex flex-col items-center h-full w-full pt-12 maxwidth min-h-screen"
 >
 	<div class="w-24 mb-10 text-primary">
-		<img src="/vadergrill.svg" alt="vader grill logo" class="w-24" />
+		<img src="{vg}" alt="vader grill logo" class="w-24" />
 	</div>
 	<h2 class="text-center text-3xl font-bold tracking-tight text-base-content">
 		Login in bij Vader Grill
