@@ -3268,7 +3268,7 @@ function set_paths(paths) {
   base = paths.base;
   assets = paths.assets || base;
 }
-const app_template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\r\n<html lang="en">\r\n	<head>\r\n		<meta charset="utf-8" />\r\n		<link rel="icon" href="static/vadergrill.svg" />\r\n		<meta name="viewport" content="width=device-width" />\r\n		' + head + "\r\n	</head>\r\n	<body>\r\n		<div>" + body + "</div>\r\n	</body>\r\n</html>\r\n";
+const app_template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="static/vadergrill.svg" />\n		<meta name="viewport" content="width=device-width" />\n		' + head + "\n	</head>\n	<body>\n		<div>" + body + "</div>\n	</body>\n</html>\n";
 const error_template = ({ status, message }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
 		<style>
@@ -3360,7 +3360,7 @@ class Server {
     const pub = Object.fromEntries(entries.filter(([k]) => k.startsWith("PUBLIC_")));
     this.options.public_env = pub;
     if (!this.options.hooks) {
-      const module = await import('./chunks/hooks.server-961c3148.js');
+      const module = await import('./chunks/hooks.server-49e5b361.js');
       if (module.externalFetch) {
         throw new Error("externalFetch has been removed \u2014 use handleFetch instead. See https://github.com/sveltejs/kit/pull/6565 for details");
       }

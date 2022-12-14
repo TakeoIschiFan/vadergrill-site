@@ -1,4 +1,4 @@
-import { serializeNonPOJO } from '$lib/utils';
+import { getCorrectFileURL, serializeNonPOJO } from '$lib/utils';
 import { error } from '@sveltejs/kit';
 
 export async function load({ locals, params }) {
@@ -15,11 +15,12 @@ export async function load({ locals, params }) {
     }
 
     const act = await getActiviteit(params.slug);
-    const bannerURL = locals.pb.getFileUrl(act, act.banner);
+    const bannerURL = getCorrectFileURL(locals.pb, act, act.banner)
+    
     let fotos = act.fotos;
     let fotosURL = []
     for (let i = 0; i < fotos.length; i++) {
-        let x = locals.pb.getFileUrl(act, act.fotos[i])
+        let x = getCorrectFileURL(locals.pb, act, act.fotos[i])
         fotosURL.push(x)
     }
 

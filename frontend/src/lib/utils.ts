@@ -7,10 +7,15 @@ export const serializeNonPOJO = (object: any) => {
     return structuredClone(object);
 };
 
-export const checkProd = (str: string) => {
-	return str.replace("http://127.0.0.1:8090/", "vadergrill.be")
-};
+export const getCorrectFileURL = (pb, collection, field) => {
 
+	let base = pb.getFileUrl(collection, field)
+	if(import.meta.env.PROD){
+		base = base.replace("127.0.0.1:8090/", "vadergrill.be/");
+	}
+	return base
+	
+};
 export const validateData = async <T extends z.ZodTypeAny>(
 	formData: FormData,
 	schema: T,
