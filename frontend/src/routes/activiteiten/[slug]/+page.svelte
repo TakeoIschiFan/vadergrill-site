@@ -39,7 +39,7 @@
     data.activiteit.start.slice(0, 4);
 </script>
 
-<div class="maxwidth">
+<div class="maxwidth min-h-screen">
   <!--Backwards arrow-->
   <div class="m-4">
     <a href="/activiteiten" class="flex items-center backlink">
