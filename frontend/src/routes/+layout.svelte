@@ -206,9 +206,9 @@
       <div
         class="flex flex-row items-center justify-center md:justify-start mb-8 mt-4 md:m-0 gap-4"
       >
-        <a href="https://www.instagram.com/vader_grill/">
+        <a href="https://www.instagram.com/vader_grill/" class="instagram">
           <svg
-            class="w-5 h-5 instagram"
+            class="w-5 h-5"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
             ><path
@@ -218,9 +218,12 @@
             /></svg
           >
         </a>
-        <a href="https://www.facebook.com/profile.php?id=100087175883410">
+        <a
+          href="https://www.facebook.com/profile.php?id=100087175883410"
+          class="facebook"
+        >
           <svg
-            class="w-5 h-5 facebook"
+            class="w-5 h-5"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
             ><path
@@ -230,9 +233,9 @@
             /></svg
           >
         </a>
-        <a href="https://discord.gg/ybaemRJKQB">
+        <a href="https://discord.gg/ybaemRJKQB" class="discord">
           <svg
-            class="w-5 h-5 discord"
+            class="w-5 h-5"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
             ><path
