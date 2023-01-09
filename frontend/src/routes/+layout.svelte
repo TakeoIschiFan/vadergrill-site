@@ -1,18 +1,28 @@
 <script>
   import { src_url_equal, svg_element } from "svelte/internal";
   import "../app.css";
+  import { page } from '$app/stores'
+  import { fade } from 'svelte/transition'
 
   export let BurgerOpen = false;
   export let onClick = () => {
     BurgerOpen = !BurgerOpen;
   };
+
+  export let loginerr = () => {
+    alert("Sorry, de Login is nog in opmaak");
+  };
+
+  export let privacyerr = () => {
+    alert("Dit wordt nog aangemaakt")
+  }
+
   let current = 0;
 
   export let data;
   console.log(data);
 
-  import vg from "../assets/vadergrill.svg"
-
+  import vg from "../assets/vadergrill.svg";
 </script>
 
 <nav class="bg-black">
@@ -21,7 +31,7 @@
       <!--Logo here-->
       <div class="relative top-1">
         <a href="/" class="flex items-center" on:click={() => (current = 0)}>
-          <img src="{vg}" class="h-16" alt="" />
+          <img src={vg} class="h-16" alt="" />
           <span
             class="font-bold self-center text-xl whitespace-nowrap py-2 px-3 hover:text-red-600"
             >Vader Grill</span
@@ -109,9 +119,10 @@
           </form>
         {:else}
           <a
-            href="/login"
+            href="/"
             class="py-2 px-4 m-5 relative bg-red-600 rounded hover:bg-opacity-70 font-bold"
             on:click={onClick}
+            on:click={loginerr}
           >
             Login</a
           >
@@ -171,9 +182,10 @@
         </form>
       {:else}
         <a
-          href="/login"
+          href="/"
           class="py-2 px-4 m-5 relative top-2 bg-red-600 rounded hover:bg-opacity-70 font-bold"
           on:click={onClick}
+          on:click={loginerr}
         >
           Login</a
         >
@@ -183,25 +195,33 @@
   <!--Small red bar underneath navigation bar-->
   <div class="bg-red-600 mx-auto h-2" />
 </nav>
-<slot />
+{#key $page.url}
+	<div class="max-w-screen-lg min-h-screen mx-auto"
+	in:fade={{delay: 100, duration:300}}>
+	<slot />
+	</div>
+	{/key}
 
 <!-- Footer -->
 <footer>
   <div class="bg-black w-full h-auto">
     <div class="maxwidth grid grid-cols-1 md:grid-cols-2 justify-between">
       <div class="flex flex-row p-4 items-center justify-center gap-4">
-        <img src="/vadergrill.svg" class="h-16" alt="" />
+        <img src={vg} class="h-16" alt="" />
         <div class="flex flex-col gap-2">
           <p>Vader Grill</p>
-          <a href="/privacy" class="underline text-xs hover:text-red-600"
+          <a href="/" class="underline text-xs hover:text-red-600"
+          on:click={privacyerr}
             >Privacy Policy</a
           >
         </div>
       </div>
-      <div class="flex flex-row items-center justify-center md:justify-start mb-8 mt-4 md:m-0 gap-4">
-        <a href="https://www.instagram.com/vader_grill/">
+      <div
+        class="flex flex-row items-center justify-center md:justify-start mb-8 mt-4 md:m-0 gap-4"
+      >
+        <a href="https://www.instagram.com/vader_grill/" class="instagram">
           <svg
-            class="w-5 h-5 instagram"
+            class="w-5 h-5"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
             ><path
@@ -211,13 +231,28 @@
             /></svg
           >
         </a>
-        <a href="https://www.facebook.com/profile.php?id=100087175883410">
+        <a
+          href="https://www.facebook.com/profile.php?id=100087175883410"
+          class="facebook"
+        >
           <svg
-            class="w-5 h-5 facebook"
+            class="w-5 h-5"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
             ><path
               d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+              opacity="1"
+              fill="currentcolor"
+            /></svg
+          >
+        </a>
+        <a href="https://discord.gg/ybaemRJKQB" class="discord">
+          <svg
+            class="w-5 h-5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"
               opacity="1"
               fill="currentcolor"
             /></svg
@@ -247,6 +282,11 @@
 
   .instagram:hover {
     color: orange;
+    transform: scale(1.1);
+  }
+
+  .discord:hover {
+    color: #7289da;
     transform: scale(1.1);
   }
 </style>

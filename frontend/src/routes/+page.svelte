@@ -53,7 +53,7 @@
 </header>
 
 <!-- Using a grid layout for the home page -->
-<div class="maxwidth">
+<div class="mainpage">
   <div class="gap-1 grid grid-cols-1 lg:grid-cols-2 relative">
     <section class="bg-red-900 m-4 rounded-3xl text-center">
       <a href="/over-ons" class="text-3xl font-bold underline m-4">Over Ons</a>

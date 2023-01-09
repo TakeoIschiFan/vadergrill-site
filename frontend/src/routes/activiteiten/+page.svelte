@@ -29,7 +29,7 @@
   }
 </script>
 
-<div class="maxwidth content-center min-h-screen">
+<div class="content-center mx-4">
   <!--Aankomende activiteiten-->
   <div class="flex flex-col gap-2 items-center mt-4">
   <h2 class="text-2xl font-bold text-center">
