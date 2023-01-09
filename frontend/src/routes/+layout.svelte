@@ -1,6 +1,8 @@
 <script>
   import { src_url_equal, svg_element } from "svelte/internal";
   import "../app.css";
+  import { page } from '$app/stores'
+  import { fade } from 'svelte/transition'
 
   export let BurgerOpen = false;
   export let onClick = () => {
@@ -10,6 +12,11 @@
   export let loginerr = () => {
     alert("Sorry, de Login is nog in opmaak");
   };
+
+  export let privacyerr = () => {
+    alert("Dit wordt nog aangemaakt")
+  }
+
   let current = 0;
 
   export let data;
@@ -188,7 +195,12 @@
   <!--Small red bar underneath navigation bar-->
   <div class="bg-red-600 mx-auto h-2" />
 </nav>
-<slot />
+{#key $page.url}
+	<div class="max-w-screen-lg min-h-screen mx-auto"
+	in:fade={{delay: 100, duration:300}}>
+	<slot />
+	</div>
+	{/key}
 
 <!-- Footer -->
 <footer>
@@ -198,7 +210,8 @@
         <img src={vg} class="h-16" alt="" />
         <div class="flex flex-col gap-2">
           <p>Vader Grill</p>
-          <a href="/privacy" class="underline text-xs hover:text-red-600"
+          <a href="/" class="underline text-xs hover:text-red-600"
+          on:click={privacyerr}
             >Privacy Policy</a
           >
         </div>

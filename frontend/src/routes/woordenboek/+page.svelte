@@ -2,7 +2,7 @@
   export let data;
 </script>
 
-<div class="maxwidth mx-auto min-h-screen">
+<div class="mb-10">
   <div class="flex flex-col gap-2 items-center mt-4">
     <h2 class="text-3xl font-bold text-center">Woordenboek</h2>
     <div class="h-1 w-1/4 top-0 bg-gradient-to-r from-red-600 to-red-700" />
